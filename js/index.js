@@ -23,6 +23,7 @@ const swapVideos = (index, nextIndex) => {
     nextVideo.play()
   }
 }
+
 const toggleDownload = (index) => {
   $('.main-header').find('.download').toggleClass('hide', index === 1)
 }
@@ -52,5 +53,9 @@ $(document).ready(() => {
 
   $('.submit-field').click(() => {
     $('#mc-embedded-subscribe-form').submit()
+  })
+
+  $('#join-beta').click(() => {
+    $.fn.fullpage.moveTo('beta-list');
   })
 });
