@@ -50,4 +50,7 @@ $(document).ready(() => {
   }
   img.src = url;
 
+  $('.submit-field').click(() => {
+    $('#mc-embedded-subscribe-form').submit()
+  })
 });
