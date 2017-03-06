@@ -37,7 +37,6 @@ i {
     border: 1px solid white;
     color: white;
     border-radius: 3px;
-    // cursor: pointer; // later
     cursor: default;
     font-weight: bold;
     transition: all .3s ease;
@@ -84,7 +83,6 @@ i {
 
   h1 {
     color: white;
-    // font-size: 72px;
     font-size: 53px;
     letter-spacing: 0px;
   }
@@ -144,7 +142,7 @@ i {
     text-align: center;
     font-size: 26px;
     margin-bottom: 35px;
-    padding: 0 100px;
+    padding: 0 80px;
   }
 
   h2 {
@@ -153,7 +151,7 @@ i {
   }
 
   .beta-list-form {
-    padding: 0 50px;
+    padding: 0 80px;
     display: flex;
     input, .button {
       height: 60px;
@@ -434,7 +432,7 @@ i {
   }
 }
 
-@media(max-width: 622px) {
+@media(max-width: 645px) {
   .section.beta-list {
     .content {
       p { font-size: 20px; }
