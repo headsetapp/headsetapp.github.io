@@ -27,7 +27,7 @@ const toggleDownload = (index) => {
   $('.main-header').find('.download').toggleClass('hide', index === 1)
 }
 
-$(document).ready(function() {
+$(document).ready(() => {
   $('#fullpage').fullpage({
     navigation: true,
     afterLoad(anchorLink, index) {
@@ -42,4 +42,12 @@ $(document).ready(function() {
   $('.scroll-arrow').click(() => {
     $.fn.fullpage.moveSectionDown();
   })
+
+  var url = '../images/bg1.jpg'
+  var img = new Image();
+  img.onload = function(){
+   $('.overlay').css({'background-image': 'url('+url+')', 'opacity': 1});
+  }
+  img.src = url;
+
 });

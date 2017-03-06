@@ -15,6 +15,10 @@ i {
   font-style: italic;
 }
 
+body {
+  background: rgba(black, 0.65);
+}
+
 .main-header {
   position: fixed;
   left: 0;
@@ -22,7 +26,9 @@ i {
   height: 90px;
   z-index: 1;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
 }
 
 .download {
@@ -32,8 +38,11 @@ i {
     font-weight: bold;
     text-align: center;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-align-items: center;
     justify-content: center;
+    -webkit-justify-content: center;
     padding: 15px 25px;
     border: 1px solid white;
     color: white;
@@ -60,9 +69,12 @@ i {
 }
 
 .wrapper {
+  position: relative;
   height: 100%;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
   max-width: 900px;
   margin: auto;
   width: 80%;
@@ -121,8 +133,6 @@ i {
 }
 
 .section.radio {
-  background-color: #42787A;
-  background-color: #10806E;
   background-color: #573A4C;
   .reddit-icon {
     width: 60px;
@@ -154,6 +164,7 @@ i {
   .beta-list-form {
     padding: 0 80px;
     display: flex;
+    display: -webkit-flex;
     input, .button {
       height: 60px;
       box-sizing: border-box;
@@ -162,6 +173,7 @@ i {
     }
     .email-field {
       flex: 1;
+      -webkit-flex: 1;
       padding: 10px 25px;
       font-size: 26px;
       outline: none;
@@ -170,9 +182,12 @@ i {
 
     .submit-field {
       display: flex;
+      display: -webkit-flex;
       width: 150px;
       align-items: center;
+      -webkit-align-items: center;
       justify-content: center;
+      -webkit-justify-content: center;
       font-weight: bold;
       background: #3498db;
       color: white;
@@ -189,24 +204,24 @@ i {
 }
 
 .section.main {
-  background-image: url('~/images/bg1.jpg');
-  background-position: center;
-  background-size: 120%;
-  background-repeat: no-repeat;
   p {
     text-align: center;
     font-size: 26px;
     margin-bottom: 35px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
 
   h1 {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     text-align: center;
     margin-bottom: 30px;
   }
   .download {
     margin: 0;
     display: flex;
+    display: -webkit-flex;
     justify-content: center;
+    -webkit-justify-content: center;
     .button {
       padding: 20px 25px;
     }
@@ -214,17 +229,33 @@ i {
 }
 
 .overlay {
+  opacity: 0;
   position: absolute;
   width: 100%;
   top: 0;
   bottom: 0;
-  background: rgba(black, 0.65);
+  background-position: center;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  transition: opacity .5s ease;
+  -webkit-transition: opacity .5s ease;
+}
+
+.overlay-darken {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.65);
 }
 
 .demo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   z-index: 2;
   video {
-    width: auto;
+    width: 320px;
     height: 570px;
     border-radius: 5px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 20px;
@@ -289,7 +320,7 @@ i {
 
 
 @media(max-width: 968px) {
-  .section.main {
+  .overlay {
     background-size: inherit;
   }
 }
@@ -320,6 +351,7 @@ i {
 @media(max-width: 879px) {
   .demo video {
     height: 500px;
+    width: 284px;
   }
   .content {
     h2 { font-size: 60px }
@@ -354,6 +386,8 @@ i {
     .demo {
       position: absolute;
       bottom: -200px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
   .section.radio {
