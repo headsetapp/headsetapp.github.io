@@ -309,6 +309,12 @@ body {
   cursor: pointer;
 }
 
+.demo-image {
+  width: 320px;
+  height: 570px;
+  border-radius: 5px;
+}
+
 @keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -346,7 +352,13 @@ body {
 @media(max-width: 420px) {
   .section.main {
     h1 { font-size: 34px; }
-    p { font-size: 18px; }
+    p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+  }
+  .scroll-more {
+    bottom: 20px;
   }
 }
 
@@ -388,9 +400,13 @@ body {
 
     .demo {
       position: absolute;
-      bottom: -200px;
       left: 50%;
+      top: 400px;
       transform: translateX(-50%);
+      transition: all .6s ease;
+      &.active {
+        transform: translateX(-50%) translateY(-300px);
+      }
     }
   }
   .section.radio {

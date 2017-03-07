@@ -4,16 +4,17 @@ const fullpageStyles = require('fullpage.js/dist/jquery.fullpage.min.css')
 const styles = require('../css/style.scss')
 const $ = require('jquery')
 const fullpage = require('fullpage.js')
+const SmartPhone = require('detect-mobile-browser')(false);
 
-const videos = {
-  2: document.querySelector('#search-video'),
-  3: document.querySelector('#radio-video'),
-  4: document.querySelector('#collections-video'),
+const demos = {
+  2: document.querySelector('#search-demo'),
+  3: document.querySelector('#radio-demo'),
+  4: document.querySelector('#collections-demo'),
 }
 
 const swapVideos = (index, nextIndex) => {
-  const previousVideo = videos[index];
-  const nextVideo = videos[nextIndex];
+  const previousVideo = demos[index];
+  const nextVideo = demos[nextIndex];
 
   if (previousVideo) {
     previousVideo.pause()
@@ -28,7 +29,16 @@ const toggleDownload = (index) => {
   $('.main-header').find('.download').toggleClass('hide', index === 1)
 }
 
-$(document).ready(() => {
+const renderHeroBackground = () => {
+  const url = '../images/bg1.jpg'
+  const img = new Image();
+  img.onload = function(){
+   $('.overlay').css({'background-image': 'url('+url+')', 'opacity': 1});
+  }
+  img.src = url;
+}
+
+const initFullPageJs = () => {
   $('#fullpage').fullpage({
     navigation: true,
     afterLoad(anchorLink, index) {
@@ -43,14 +53,9 @@ $(document).ready(() => {
   $('.scroll-arrow').click(() => {
     $.fn.fullpage.moveSectionDown();
   })
+}
 
-  var url = '../images/bg1.jpg'
-  var img = new Image();
-  img.onload = function(){
-   $('.overlay').css({'background-image': 'url('+url+')', 'opacity': 1});
-  }
-  img.src = url;
-
+const handleJoinBetaForm = () => {
   $('.submit-field').click(() => {
     $('#mc-embedded-subscribe-form').submit()
   })
@@ -58,4 +63,27 @@ $(document).ready(() => {
   $('#join-beta').click(() => {
     $.fn.fullpage.moveTo('beta-list');
   })
+}
+
+const handleMobileDetection = () => {
+  if (SmartPhone.isAny()) {
+    // replace videos with images
+    const demos = ['search-demo','radio-demo','collections-demo'];
+    demos.forEach((demo) => {
+      $(`#${demo}`).replaceWith(`<img src='images/${demo}.png' id='${demo}' class='demo-image'/>`)
+    })
+
+    $('.demo').click(function() {
+      $(this).toggleClass('active')
+      console.log("what?");
+    })
+  }
+
+}
+
+$(document).ready(() => {
+  initFullPageJs()
+  renderHeroBackground()
+  handleJoinBetaForm()
+  handleMobileDetection()
 });

@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.config.js --progress --colors --inline --hot",
+    "start": "webpack-dev-server --config webpack.config.js --progress --colors --inline --hot --host 0.0.0.0",
     "build": "webpack --optimize-minimize --config webpack.config.js --progress --colors"
   },
   "devDependencies": {
@@ -21,6 +21,7 @@
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
+    "detect-mobile-browser": "^5.0.0",
     "fullpage.js": "^2.9.2",
     "jquery": "^3.1.1"
   }
