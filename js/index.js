@@ -60,7 +60,7 @@ const handleJoinBetaForm = () => {
     $('#mc-embedded-subscribe-form').submit()
   })
 
-  $('#join-beta').click(() => {
+  $('.download').find('.button').click(() => {
     $.fn.fullpage.moveTo('beta-list');
   })
 }
@@ -75,7 +75,6 @@ const handleMobileDetection = () => {
 
     $('.demo').click(function() {
       $(this).toggleClass('active')
-      console.log("what?");
     })
   }
 
