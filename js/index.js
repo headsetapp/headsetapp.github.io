@@ -26,7 +26,8 @@ const swapVideos = (index, nextIndex) => {
 }
 
 const toggleDownload = (index) => {
-  $('.main-header').find('.download').toggleClass('hide', index === 1)
+  const isOff = index === 1 || index === 5
+  $('.main-header').find('.download').toggleClass('hide', isOff)
 }
 
 const renderHeroBackground = () => {

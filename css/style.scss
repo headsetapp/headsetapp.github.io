@@ -57,7 +57,9 @@ body {
     }
   }
   &.hide {
-    opacity: 0
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
   }
 }
 .logo {
@@ -148,25 +150,29 @@ body {
 }
 
 .section.beta-list {
+  .wrapper {
+    width: 60%;
+    max-width: 480px;
+  }
   background-color: #2ecc71;
   p {
     text-align: center;
-    font-size: 26px;
-    margin-bottom: 35px;
-    padding: 0 80px;
+    font-size: 38px;
+    margin-bottom: 42px;
+    margin-top: 0;
   }
 
   h2 {
     text-align: center;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
 
   .beta-list-form {
-    padding: 0 80px;
     display: flex;
     display: -webkit-flex;
+    flex-direction: column;
     input, .button {
-      height: 60px;
+      height: 55px;
       box-sizing: border-box;
       border: none;
       border-radius: 3px;
@@ -175,15 +181,15 @@ body {
       flex: 1;
       -webkit-flex: 1;
       padding: 10px 25px;
-      font-size: 26px;
+      font-size: 22px;
       outline: none;
-      margin-right: 10px;
+      margin-bottom: 10px;
     }
 
     .submit-field {
       display: flex;
       display: -webkit-flex;
-      width: 150px;
+      // width: 150px;
       align-items: center;
       -webkit-align-items: center;
       justify-content: center;
@@ -196,7 +202,7 @@ body {
       cursor: pointer;
 
       &:hover {
-        background: lighten(#3498db, 0.1);
+        background: lighten(#3498db, 8);
       }
     }
   }
@@ -498,7 +504,6 @@ body {
 @media(max-width: 473px) {
   .section.beta-list {
     .beta-list-form {
-      flex-direction: column;
       .email-field {
         margin-bottom: 10px;
         width: 100%;
