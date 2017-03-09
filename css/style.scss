@@ -503,6 +503,14 @@ body {
 
 @media(max-width: 473px) {
   .section.beta-list {
+    .content {
+      h2 {
+        font-size: 44px;
+      }
+      p {
+        font-size: 25px;
+      }
+    }
     .beta-list-form {
       .email-field {
         margin-bottom: 10px;
