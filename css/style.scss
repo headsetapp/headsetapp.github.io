@@ -276,10 +276,25 @@ body {
   left: 0;
   right: 0;
   text-align: center;
-  height: 40px;
+  height: 80px;
   font-size: 16px;
-  a, & {
-    color: white
+  .social {
+    margin-bottom: 5px;
+
+    a {
+      width: 40px;
+      display: inline-block;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    a, & {
+      border: none;
+      &:hover {
+        background: none;
+      }
+    }
   }
 }
 
