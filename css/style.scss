@@ -17,6 +17,7 @@ i {
 
 body {
   background: rgba(black, 0.65);
+  color: white
 }
 
 .main-header {
@@ -167,17 +168,25 @@ body {
     // margin-bottom: 30px;
   }
 
+  a {
+    border: none;
+    &:hover {
+      background: none;
+    }
+  }
   .beta-list-form {
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
+
     input, .button {
-      height: 55px;
+
       box-sizing: border-box;
       border: none;
       border-radius: 3px;
     }
     .email-field {
+      height: 55px;
       flex: 1;
       -webkit-flex: 1;
       padding: 10px 25px;
@@ -187,6 +196,7 @@ body {
     }
 
     .submit-field {
+      height: 65px;
       display: flex;
       display: -webkit-flex;
       // width: 150px;
@@ -280,7 +290,6 @@ body {
   font-size: 16px;
   .social {
     margin-bottom: 5px;
-
     a {
       width: 40px;
       display: inline-block;
@@ -289,15 +298,8 @@ body {
   .content {
     display: flex;
     flex-direction: column;
-    a, & {
-      border: none;
-      &:hover {
-        background: none;
-      }
-    }
   }
 }
-
 /* Overrides */
 
 .fp-tableCell {
@@ -331,6 +333,19 @@ body {
   width: 320px;
   height: 570px;
   border-radius: 5px;
+}
+
+.policy {
+  text-align: center;
+  margin-top: 15px;
+  a {
+    font-size: 14px;
+    font-weight: normal;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
 }
 
 @keyframes bounce {
@@ -497,9 +512,6 @@ body {
     }
     .beta-list-form {
       padding: 0;
-      .submit-field {
-        width: 120px;
-      }
     }
   }
 }
@@ -509,9 +521,6 @@ body {
     .content {
       p { font-size: 20px; }
       h2 { font-size: 54px; }
-    }
-    .submit-field {
-      width: 110px;
     }
   }
 }
