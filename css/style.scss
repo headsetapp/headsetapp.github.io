@@ -1,5 +1,4 @@
 @import './reset';
-
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Sans+Pro:300,300italic,700);
 
 h1,h2,h3,h4,h5,h6, .button {
@@ -36,6 +35,7 @@ body {
   margin-left: 23px;
   transition: opacity .3s ease;
   .button {
+    text-decoration: none;
     font-weight: bold;
     text-align: center;
     display: flex;
@@ -150,7 +150,7 @@ body {
   background-color: #3D8EB9;
 }
 
-.section.beta-list {
+.section.get {
   .wrapper {
     width: 60%;
     max-width: 480px;
@@ -168,54 +168,12 @@ body {
     // margin-bottom: 30px;
   }
 
-  a {
+  a:not(.button) {
     border: none;
     &:hover {
       background: none;
     }
   }
-  .beta-list-form {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-
-    input, .button {
-
-      box-sizing: border-box;
-      border: none;
-      border-radius: 3px;
-    }
-    .email-field {
-      height: 55px;
-      flex: 1;
-      -webkit-flex: 1;
-      padding: 10px 25px;
-      font-size: 22px;
-      outline: none;
-      margin-bottom: 10px;
-    }
-
-    .submit-field {
-      height: 55px;
-      display: flex;
-      display: -webkit-flex;
-      align-items: center;
-      -webkit-align-items: center;
-      justify-content: center;
-      -webkit-justify-content: center;
-      font-weight: bold;
-      background: #3498db;
-      color: white;
-      text-transform: uppercase;
-      transition: background .3s ease;
-      cursor: pointer;
-
-      &:hover {
-        background: lighten(#3498db, 8);
-      }
-    }
-  }
-
 }
 
 .section.main {
@@ -238,7 +196,18 @@ body {
     justify-content: center;
     -webkit-justify-content: center;
     .button {
+      font-size: 18px;
       padding: 20px 25px;
+    }
+  }
+}
+
+.section.get {
+  .button {
+    padding: 25px;
+    font-size: 18px;
+    &:hover {
+      background-color: #3D8EB9;
     }
   }
 }
@@ -491,32 +460,29 @@ body {
   }
 }
 
-// Beta page
+// get page
 @media(max-width: 900px) {
-  .section.beta-list .beta-list-form {
+  .section.get .get-form {
     .email-field {
       font-size: 20px;
       padding: 10px 15px;
-    }
-    .email-field, .submit-field {
-      height: 45px;
     }
   }
 }
 
 @media(max-width: 872px) {
-  .section.beta-list {
+  .section.get {
     .content {
       p { padding: 0; }
     }
-    .beta-list-form {
+    .get-form {
       padding: 0;
     }
   }
 }
 
 @media(max-width: 645px) {
-  .section.beta-list {
+  .section.get {
     .content {
       p { font-size: 20px; }
       h2 { font-size: 54px; }
@@ -525,7 +491,7 @@ body {
 }
 
 @media(max-width: 473px) {
-  .section.beta-list {
+  .section.get {
     .content {
       h2 {
         font-size: 44px;
@@ -534,7 +500,7 @@ body {
         font-size: 25px;
       }
     }
-    .beta-list-form {
+    .get-form {
       .email-field {
         margin-bottom: 10px;
         width: 100%;
@@ -572,7 +538,7 @@ body {
       bottom: -300px;
     }
   }
-  .section.beta-list {
+  .section.get {
     .content {
       h2 {
         font-size: 30px;

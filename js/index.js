@@ -39,6 +39,12 @@ const renderHeroBackground = () => {
   img.src = url;
 }
 
+const handleDownload = () => {
+  $('.download').find('.button').attr({
+    href: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.1/Headset-1.5.1.dmg"
+  })
+}
+
 const initFullPageJs = () => {
   $('#fullpage').fullpage({
     navigation: true,
@@ -53,16 +59,6 @@ const initFullPageJs = () => {
 
   $('.scroll-arrow').click(() => {
     $.fn.fullpage.moveSectionDown();
-  })
-}
-
-const handleJoinBetaForm = () => {
-  $('.submit-field').click(() => {
-    $('#mc-embedded-subscribe-form').submit()
-  })
-
-  $('.download').find('.button').click(() => {
-    $.fn.fullpage.moveTo('beta-list');
   })
 }
 
@@ -84,6 +80,6 @@ const handleMobileDetection = () => {
 $(document).ready(() => {
   initFullPageJs()
   renderHeroBackground()
-  handleJoinBetaForm()
   handleMobileDetection()
+  handleDownload()
 });
