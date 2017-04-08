@@ -25,11 +25,6 @@ const swapVideos = (index, nextIndex) => {
   }
 }
 
-const toggleDownload = (index) => {
-  const isOff = index === 1 || index === 5
-  $('.main-header').find('.download').toggleClass('hide', isOff)
-}
-
 const renderHeroBackground = () => {
   const url = '../images/bg1.jpg'
   const img = new Image();
@@ -48,11 +43,7 @@ const handleDownload = () => {
 const initFullPageJs = () => {
   $('#fullpage').fullpage({
     navigation: true,
-    afterLoad(anchorLink, index) {
-      toggleDownload(index)
-    },
     onLeave(index, nextIndex, direction) {
-      toggleDownload(index)
       swapVideos(index, nextIndex)
     }
   });

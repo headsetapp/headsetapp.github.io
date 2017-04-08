@@ -47,7 +47,7 @@ body {
     padding: 15px 25px;
     border: 1px solid white;
     color: white;
-    border-radius: 3px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
     transition: all .3s ease;
@@ -197,7 +197,8 @@ body {
     -webkit-justify-content: center;
     .button {
       font-size: 18px;
-      padding: 20px 25px;
+      padding: 25px;
+      width: 270px;
     }
   }
 }
