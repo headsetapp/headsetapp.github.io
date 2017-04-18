@@ -32,7 +32,6 @@ body {
 }
 
 .download {
-  margin-left: 23px;
   transition: opacity .3s ease;
   .button {
     text-decoration: none;
@@ -160,7 +159,7 @@ body {
     text-align: center;
     font-size: 38px;
     margin-bottom: 42px;
-    margin-top: 0;
+    margin-top: 15px;
   }
 
   h2 {
@@ -172,6 +171,14 @@ body {
     border: none;
     &:hover {
       background: none;
+    }
+  }
+  .download {
+    margin: auto;
+    width: 380px;
+    .button {
+      padding: 25px;
+      font-size: 25px;
     }
   }
 }
@@ -195,10 +202,16 @@ body {
     display: -webkit-flex;
     justify-content: center;
     -webkit-justify-content: center;
+    position: relative;
+    top: 30px;
     .button {
-      font-size: 18px;
-      padding: 25px;
+      font-size: 20px;
+      padding: 22px;
       width: 270px;
+    }
+    .icon-download-1 {
+      position: relative;
+      right: 5px;
     }
   }
 }
@@ -487,6 +500,14 @@ body {
     .content {
       p { font-size: 20px; }
       h2 { font-size: 54px; }
+    }
+    .download {
+      margin: 0;
+      width: 100%;
+      .button {
+        padding: 20px;
+        font-size: 20px;
+      }
     }
   }
 }
