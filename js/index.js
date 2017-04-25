@@ -36,7 +36,7 @@ const renderHeroBackground = () => {
 
 const handleDownload = () => {
   $('.download').find('.button').attr({
-    href: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.1/Headset-1.5.1.dmg"
+    href: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2/Headset-1.5.2.dmg"
   })
 }
 
