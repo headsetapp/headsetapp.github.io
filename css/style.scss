@@ -15,7 +15,7 @@ i {
 }
 
 body {
-  background: rgba(black, 0.65);
+  background: #343e63;
   color: white
 }
 
@@ -153,9 +153,13 @@ body {
   .wrapper {
     width: 60%;
     max-width: 480px;
+    .content {
+      position: relative;
+      top: -60px;
+    }
   }
-  background-color: #2ecc71;
-  p {
+  background-color: #343e63;
+  .offer {
     text-align: center;
     font-size: 38px;
     margin-bottom: 42px;
@@ -221,7 +225,8 @@ body {
     padding: 25px;
     font-size: 18px;
     &:hover {
-      background-color: #3D8EB9;
+      background: #2ecc71;
+      border-color: #2ecc71;
     }
   }
 }
@@ -319,11 +324,11 @@ body {
 
 .policy {
   text-align: center;
-  margin-top: 15px;
-  a {
+  .copyright {
+    margin-top: 4px;
     font-size: 14px;
     font-weight: normal;
-    &:hover {
+    a:hover {
       text-decoration: underline;
     }
   }
@@ -487,7 +492,7 @@ body {
 @media(max-width: 872px) {
   .section.get {
     .content {
-      p { padding: 0; }
+      .offer { padding: 0; }
     }
     .get-form {
       padding: 0;
@@ -498,7 +503,7 @@ body {
 @media(max-width: 645px) {
   .section.get {
     .content {
-      p { font-size: 20px; }
+      .offer { font-size: 20px; }
       h2 { font-size: 54px; }
     }
     .download {
@@ -518,7 +523,7 @@ body {
       h2 {
         font-size: 44px;
       }
-      p {
+      .offer {
         font-size: 25px;
       }
     }

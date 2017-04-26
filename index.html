@@ -108,16 +108,13 @@
     <div class="wrapper">
       <div class="content">
         <h2>Discover Music.</h2>
-        <p>
-          Start listening free!
+        <p class="offer">
+          Start listening free! 🚀
         </p>
         <div class="download">
           <a href="" class="button">
-            🚀 Download for Mac
+            <i class="icon-download-1"></i> Download for Mac
           </a>
-        </div>
-        <div class="policy">
-          <a href="policies">Legal</a>
         </div>
         </form>
       </div>
@@ -126,15 +123,30 @@
     <div class="footer">
       <div class="content">
         <div class="social">
-          <a href="https://www.facebook.com/headsethq/" target="_blank"><img src="images/facebook-logo.png" alt="" width="30px" height="30px"></a>
-          <a href="https://twitter.com/headsetapp" target="_blank"><img src="images/twitter-logo.gif" alt="" width="30px" height="30px"></a>
+          <a href="https://www.facebook.com/headsethq/" target="_blank">
+            <img src="images/facebook.svg" alt="" width="30px" height="30px">
+          </a>
+          <a href="https://twitter.com/headsetapp" target="_blank">
+            <img src="images/twitter.svg" alt="" width="30px" height="30px">
+          </a>
+          <a href="mailto:hello@headsetapp.co" target="_blank">
+            <img src="images/email.svg" alt="" width="30px" height="30px" style="display:inline-block;">
+          </a>
         </div>
-        <a href="mailto:hello@headsetapp.co" target="_blank">hello@headsetapp.co</a>
+        <div class="policy">
+          <p class="copyright">
+            Copyright &copy; <span id="copy-year"></span> Alignment Digital | <a href="legal">Legal</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <script src="js/bundle.js"></script>
 <script src="js/ga.js"></script>
+<script>
+  var d = new Date().getFullYear()
+  document.querySelector('#copy-year').innerText = d
+</script>
 </body>
 </html>
