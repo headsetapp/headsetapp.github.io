@@ -48,6 +48,7 @@ const downloadButtonText = {
 }
 
 const handleDownload = () => {
+  console.log(downloadLinks[platform.os.family]);
   $('.download').find('.button').attr({
     href: downloadLinks[platform.os.family] || downloadLinks['Linux']
   }).find('.os').text(downloadButtonText[platform.os.family] || downloadButtonText['Linux'])
