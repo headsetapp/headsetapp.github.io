@@ -5,6 +5,7 @@ const styles = require('../css/style.scss')
 const $ = require('jquery')
 const fullpage = require('fullpage.js')
 const SmartPhone = require('detect-mobile-browser')(false);
+const platform = require('platform')
 
 const demos = {
   2: document.querySelector('#search-demo'),
@@ -34,10 +35,17 @@ const renderHeroBackground = () => {
   img.src = url;
 }
 
+const downloadLinks = {
+  'OS X': "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2/Headset-1.5.2.dmg",
+  windows: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2-windows/HeadsetSetup.exe",
+  linux: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2-linux/Headset_1.5.2_amd64.deb"
+}
+
 const handleDownload = () => {
+  console.log(platform.os.family);
   $('.download').find('.button').attr({
-    href: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2/Headset-1.5.2.dmg"
-  })
+    href: platform.os.family
+  }).find('.os').text(' Mac')
 }
 
 const initFullPageJs = () => {
