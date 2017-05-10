@@ -37,15 +37,20 @@ const renderHeroBackground = () => {
 
 const downloadLinks = {
   'OS X': "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2/Headset-1.5.2.dmg",
-  windows: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2-windows/HeadsetSetup.exe",
-  linux: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2-linux/Headset_1.5.2_amd64.deb"
+  Windows: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2-windows/HeadsetSetup.exe",
+  Linux: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2-linux/Headset_1.5.2_amd64.deb"
+}
+
+const downloadButtonText = {
+  'OS X': 'Mac',
+  Windows: 'Windows',
+  Linux: 'Linux'
 }
 
 const handleDownload = () => {
-  console.log(platform.os.family);
   $('.download').find('.button').attr({
-    href: platform.os.family
-  }).find('.os').text(' Mac')
+    href: downloadLinks[platform.os.family] || downloadLinks['Linux']
+  }).find('.os').text(downloadButtonText[platform.os.family] || downloadButtonText['Linux'])
 }
 
 const initFullPageJs = () => {
