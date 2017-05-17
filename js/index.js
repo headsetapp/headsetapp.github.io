@@ -38,13 +38,13 @@ const renderHeroBackground = () => {
 const downloadLinks = {
   'OS X': "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2/Headset-1.5.2.dmg",
   Windows: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2-windows/HeadsetSetup.exe",
-  Linux: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2-linux/Headset_1.5.2_amd64.deb"
+  Linux: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.3-deb/Headset_1.5.3_amd64.deb"
 }
 
 const downloadButtonText = {
   'OS X': 'Mac',
   Windows: 'Windows',
-  Linux: 'Linux'
+  Linux: 'Ubuntu'
 }
 
 const handleDownload = () => {
