@@ -5,7 +5,6 @@ const styles = require('../css/style.scss')
 const $ = require('jquery')
 const fullpage = require('fullpage.js')
 const SmartPhone = require('detect-mobile-browser')(false);
-const platform = require('platform')
 
 const demos = {
   2: document.querySelector('#search-demo'),
@@ -33,25 +32,6 @@ const renderHeroBackground = () => {
    $('.overlay').css({'background-image': 'url('+url+')', 'opacity': 1});
   }
   img.src = url;
-}
-
-const downloadLinks = {
-  'OS X': "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2/Headset-1.5.2.dmg",
-  Windows: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.2-windows/HeadsetSetup.exe",
-  Linux: "https://github.com/headsetapp/headset-electron/releases/download/v1.5.3-deb/Headset_1.5.3_amd64.deb"
-}
-
-const downloadButtonText = {
-  'OS X': 'Mac',
-  Windows: 'Windows',
-  Linux: 'Ubuntu'
-}
-
-const handleDownload = () => {
-  console.log(platform.os.family, downloadLinks);
-  $('.download').find('.button').attr({
-    href: downloadLinks[platform.os.family] || downloadLinks['Linux']
-  }).find('.os').text(downloadButtonText[platform.os.family] || downloadButtonText['Linux'])
 }
 
 const initFullPageJs = () => {
@@ -86,5 +66,4 @@ $(document).ready(() => {
   initFullPageJs()
   renderHeroBackground()
   handleMobileDetection()
-  handleDownload()
 });

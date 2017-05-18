@@ -33,6 +33,13 @@ body {
 
 .download {
   transition: opacity .3s ease;
+  margin: 0;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  position: relative;
+  top: 30px;
   .button {
     text-decoration: none;
     font-weight: bold;
@@ -43,25 +50,34 @@ body {
     -webkit-align-items: center;
     justify-content: center;
     -webkit-justify-content: center;
-    padding: 15px 25px;
+    padding: 8px;
     border: 1px solid white;
     color: white;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
     transition: all .3s ease;
+    font-size: 23px;
+    padding: 19px 22px;
+    width: 215px;
     opacity: 1;
+    img {
+      margin-right: 7px;
+    }
     &:hover {
-      background: #2ecc71;
-      border-color: #2ecc71;
+      &.ubuntu {
+        background: #2ecc71;
+        border-color: #2ecc71;
+      }
+      &.windows {
+        background: #0b7d93;
+        border-color: #0b7d93;
+
+      }
     }
   }
-  &.hide {
-    opacity: 0;
-    cursor: default;
-    pointer-events: none;
-  }
 }
+
 .logo {
   box-sizing: border-box;
   img {
@@ -151,8 +167,7 @@ body {
 
 .section.get {
   .wrapper {
-    width: 60%;
-    max-width: 480px;
+    width: 86%;
     .content {
       position: relative;
       top: -60px;
@@ -179,7 +194,6 @@ body {
   }
   .download {
     margin: auto;
-    width: 380px;
     .button {
       padding: 25px;
       font-size: 25px;
@@ -190,9 +204,17 @@ body {
 .section.main {
   p {
     text-align: center;
-    font-size: 26px;
-    margin-bottom: 35px;
+
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  }
+  .download-github {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .hero-copy {
+    margin-bottom: 35px;
+    font-size: 26px;
   }
 
   h1 {
@@ -200,34 +222,13 @@ body {
     text-align: center;
     margin-bottom: 30px;
   }
-  .download {
-    margin: 0;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    -webkit-justify-content: center;
-    position: relative;
-    top: 30px;
-    .button {
-      font-size: 20px;
-      padding: 22px;
-      width: 270px;
-    }
-    .icon-download-1 {
-      position: relative;
-      right: 5px;
-    }
-  }
 }
+
 
 .section.get {
   .button {
     padding: 25px;
     font-size: 18px;
-    &:hover {
-      background: #2ecc71;
-      border-color: #2ecc71;
-    }
   }
 }
 
@@ -352,27 +353,35 @@ body {
   .overlay {
     background-size: inherit;
   }
+  .download {
+    flex-direction: column;
+    align-items: center;
+    .button {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
 }
 
 // Main Section
 @media(max-width: 670px) {
   .section.main {
     h1 { font-size: 48px; }
-    p { font-size: 24px; }
+    .hero-copy { font-size: 24px; }
   }
 }
 
 @media(max-width: 504px) {
   .section.main {
     h1 { font-size: 40px; }
-    p { font-size: 21px; }
+    .hero-copy { font-size: 21px; }
   }
 }
 
 @media(max-width: 420px) {
   .section.main {
     h1 { font-size: 34px; }
-    p {
+    .hero-copy {
       font-size: 18px;
       margin-bottom: 25px;
     }
@@ -475,7 +484,8 @@ body {
   }
   .download .button {
     padding: 10px;
-    font-size: 12px;
+    font-size: 18px;
+    display: flex;
   }
 }
 
@@ -518,6 +528,17 @@ body {
 }
 
 @media(max-width: 473px) {
+  .section.main {
+    .download-github {
+      font-size: 14px;
+    }
+    .hero-copy {
+      margin-bottom: 0;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
   .section.get {
     .content {
       h2 {
@@ -549,7 +570,7 @@ body {
     h1 {
       font-size: 30px;
     }
-    p {
+    .hero-copy {
       font-size: 16px;
     }
     .scroll-more {
@@ -571,9 +592,6 @@ body {
         font-size: 30px;
       }
       p {
-        font-size: 15px;
-      }
-      .email-field, .submit-field {
         font-size: 15px;
       }
     }
