@@ -54,7 +54,7 @@ const handleMobileDetection = () => {
     demos.forEach((demo) => {
       $(`#${demo}`).replaceWith(`<img src='images/${demo}.png' id='${demo}' class='demo-image'/>`)
     })
-    $('.download').html('<p>Available for Windows, Mac and Ubuntu</p>')
+    $('.download').removeClass('download').html('<p>Available for Windows, Mac and Ubuntu.</p>')
     $('.demo').click(function() {
       $(this).toggleClass('active')
     })
