@@ -1,11 +1,12 @@
 "use strict"
 
-const fullpageStyles = require('fullpage.js/dist/jquery.fullpage.min.css')
-const styles = require('../css/style.scss')
-const $ = require('jquery')
-const fullpage = require('fullpage.js')
-const SmartPhone = require('detect-mobile-browser')(false);
+const fullpageStyles = require('fullpage.js/dist/jquery.fullpage.min.css');
+const styles = require('../css/style.scss');
+const $ = require('jquery');
+const fullpage = require('fullpage.js');
+const MobileDetect = require('mobile-detect');
 
+const md = new MobileDetect(window.navigator.userAgent);
 const demos = {
   2: document.querySelector('#search-demo'),
   3: document.querySelector('#collections-demo'),
@@ -50,7 +51,7 @@ const initFullPageJs = () => {
 }
 
 const handleMobileDetection = () => {
-  if (SmartPhone.isAny()) {
+  if (md.mobile()) {
     // replace videos with images
     const demos = ['search-demo', 'collections-demo','radio-demo'];
     demos.forEach((demo) => {
