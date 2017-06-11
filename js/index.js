@@ -8,8 +8,8 @@ const SmartPhone = require('detect-mobile-browser')(false);
 
 const demos = {
   2: document.querySelector('#search-demo'),
-  3: document.querySelector('#radio-demo'),
-  4: document.querySelector('#collections-demo'),
+  3: document.querySelector('#collections-demo'),
+  4: document.querySelector('#radio-demo'),
 }
 
 const swapVideos = (index, nextIndex) => {
@@ -37,6 +37,8 @@ const renderHeroBackground = () => {
 const initFullPageJs = () => {
   $('#fullpage').fullpage({
     navigation: true,
+    scrollBar: true,
+    touchSensitivity: 0,
     onLeave(index, nextIndex, direction) {
       swapVideos(index, nextIndex)
     }
@@ -50,7 +52,7 @@ const initFullPageJs = () => {
 const handleMobileDetection = () => {
   if (SmartPhone.isAny()) {
     // replace videos with images
-    const demos = ['search-demo','radio-demo','collections-demo'];
+    const demos = ['search-demo', 'collections-demo','radio-demo'];
     demos.forEach((demo) => {
       $(`#${demo}`).replaceWith(`<img src='images/${demo}.png' id='${demo}' class='demo-image'/>`)
     })
