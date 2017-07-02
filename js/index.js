@@ -9,8 +9,8 @@ const MobileDetect = require('mobile-detect');
 const md = new MobileDetect(window.navigator.userAgent);
 const demos = {
   2: document.querySelector('#search-demo'),
-  3: document.querySelector('#collections-demo'),
-  4: document.querySelector('#radio-demo'),
+  3: document.querySelector('#radio-demo'),
+  4: document.querySelector('#collections-demo'),
 }
 
 const swapVideos = (index, nextIndex) => {
