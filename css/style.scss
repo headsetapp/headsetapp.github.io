@@ -5,6 +5,7 @@ h1,h2,h3,h4,h5,h6, .button {
   font-family: "Lato", sans-serif;
   font-weight: 300;
 }
+
 p,a,li,blockquote, input[type="email"] {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
@@ -213,6 +214,13 @@ body {
   .download-github {
     margin-top: 50px;
     font-size: 20px;
+  }
+  .phone-msg {
+    background:rgba(#343e63, 0.7);
+    color: white ;
+    text-shadow: none;
+    padding: 5px;
+    text-align: center;
   }
 
   .hero-copy {
@@ -604,4 +612,7 @@ body {
 .mac-icon {
   position: relative;
   bottom: 1px;
+}
+.phone-msg {
+  text-align: center;
 }

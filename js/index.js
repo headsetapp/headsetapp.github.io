@@ -51,13 +51,14 @@ const initFullPageJs = () => {
 }
 
 const handleMobileDetection = () => {
-  if (md.mobile()) {
+  if (!md.mobile()) {
     // replace videos with images
     const demos = ['search-demo', 'collections-demo','radio-demo'];
     demos.forEach((demo) => {
       $(`#${demo}`).replaceWith(`<img src='images/${demo}.png' id='${demo}' class='demo-image'/>`)
     })
-    $('.download').removeClass('download').html('<p>Available for Windows, Mac and Ubuntu.</p>')
+    $('.download').removeClass('download').html('<p class="phone-msg">Available for Windows, Mac and Ubuntu.</p>')
+    $('.download-github').remove()
     $('.demo').click(function() {
       $(this).toggleClass('active')
     })
