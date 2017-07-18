@@ -365,11 +365,17 @@ body {
     background-size: inherit;
   }
   .download {
-    flex-direction: column;
     align-items: center;
     .button {
       display: block;
       margin-bottom: 5px;
+      width: 175px;
+      font-size: 20px;
+      img {
+        width: 20px;
+        position: relative;
+        top: 2px;
+      }
     }
   }
 }
