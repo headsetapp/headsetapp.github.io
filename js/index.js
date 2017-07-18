@@ -51,7 +51,7 @@ const initFullPageJs = () => {
 }
 
 const handleMobileDetection = () => {
-  if (!md.mobile()) {
+  if (md.mobile()) {
     // replace videos with images
     const demos = ['search-demo', 'collections-demo','radio-demo'];
     demos.forEach((demo) => {
