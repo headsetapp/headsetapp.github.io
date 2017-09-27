@@ -26,15 +26,6 @@ const swapVideos = (index, nextIndex) => {
   }
 }
 
-const renderHeroBackground = () => {
-  const url = '../images/bg1.jpg'
-  const img = new Image();
-  img.onload = function(){
-   $('.overlay').css({'background-image': 'url('+url+')', 'opacity': 1});
-  }
-  img.src = url;
-}
-
 const initFullPageJs = () => {
   $('#fullpage').fullpage({
     navigation: true,
@@ -57,17 +48,37 @@ const handleMobileDetection = () => {
     demos.forEach((demo) => {
       $(`#${demo}`).replaceWith(`<img src='images/${demo}.png' id='${demo}' class='demo-image'/>`)
     })
-    $('.download').removeClass('download').html('<p class="phone-msg">Available for Windows, Mac and Ubuntu.</p>')
+    $('.download').removeClass('download').html('<p class="phone-msg">Available for Windows, Mac and Linux.</p>')
     $('.download-github').remove()
     $('.demo').click(function() {
       $(this).toggleClass('active')
     })
   }
+}
 
+const handleDownloadLinks = () => {
+  const os = window.navigator.userAgent
+  const baseUrl = "https://github.com/headsetapp/headset-electron/releases/download/v1.6.0/"
+  const downloadsWrapper = $('.download')
+  if (os.indexOf('Windows') !== -1) {
+    console.log('windows');
+  } else if (os.indexOf('Mac') !== -1) {
+    downloadsWrapper.html(`
+      Down
+      <a href="${baseUrl}/Headset-1.6.0.dmg" class="button mac">
+        <img src="images/apple-icon.svg" width="25" class="mac-icon"/> .dmg
+      </a>
+      <a href="${baseUrl}/Headset-1.6.0_mac.zip" class="button mac">
+        <img src="images/apple-icon.svg" width="25" class="mac-icon"/> .zip
+      </a>
+    `)
+  } else {
+    console.log('Linux');
+  }
 }
 
 $(document).ready(() => {
   initFullPageJs()
-  renderHeroBackground()
   handleMobileDetection()
+  // handleDownloadLinks()
 });

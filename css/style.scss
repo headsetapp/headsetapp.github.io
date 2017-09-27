@@ -16,7 +16,9 @@ i {
 }
 
 body {
-  background: #343e63;
+  background: #c0392b;
+  background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);
+  background: linear-gradient(to right, #8e44ad, #c0392b);
   color: white
 }
 
@@ -32,56 +34,17 @@ body {
   -webkit-align-items: center;
 }
 
-.download {
-  transition: opacity .3s ease;
-  margin: 0;
-  display: flex;
-  display: -webkit-flex;
-  justify-content: space-around;
-  -webkit-justify-content: space-around;
-  position: relative;
-  top: 30px;
-  .button {
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    -webkit-align-items: center;
-    justify-content: center;
-    -webkit-justify-content: center;
-    padding: 8px;
-    border: 1px solid white;
+.social {
+  z-index: 3;
+  flex: 1;
+  text-align: right;
+  a {
+    margin-left: 15px;
     color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all .3s ease;
-    font-size: 23px;
-    padding: 19px 22px;
-    width: 215px;
-    opacity: 1;
-    img {
-      margin-right: 7px;
-    }
-    &:hover {
-      &.ubuntu {
-        background: #2ecc71;
-        border-color: #2ecc71;
-      }
-      &.windows {
-        background: #0b7d93;
-        border-color: #0b7d93;
-      }
-      &.mac {
-        background: #e6375a;
-        border-color: #e6375a;
-      }
-    }
+    text-decoration: none;
+    font-size: 20px;
   }
 }
-
 .logo {
   box-sizing: border-box;
   img {
@@ -116,16 +79,12 @@ body {
   width: 100%;
   z-index: 1;
 
-  h1 {
-    color: white;
-    font-size: 53px;
-    letter-spacing: 0px;
-  }
   h2 {
     color: white;
     font-size: 70px;
     letter-spacing: 0px;
   }
+
   p {
     font-size: 26px;
     color: white;
@@ -133,15 +92,15 @@ body {
     line-height: 1.5;
   }
 
-  a, a:active {
+  p a, p a:active {
     color: white;
     text-decoration: none;
     position: relative;
     font-weight: bold;
-    border-bottom: 3px solid #e6375a;
+    border-bottom: 3px solid #1f246b;
     transition: background .3s ease;
     &:hover {
-      background: #e6375a;
+      background: #1f246b;
     }
   }
 }
@@ -151,22 +110,21 @@ body {
 }
 
 .section.youtube {
-  background-color: #ff7473;
+  background: #FF512F;
+  background: -webkit-linear-gradient(to top, #F09819, #FF512F);
+  background: linear-gradient(to top, #F09819, #FF512F);
 }
 
 .section.radio {
-  background-color: #573A4C;
-  .reddit-icon {
-    width: 60px;
-    height: auto;
-    vertical-align: baseline;
-    display: inline-block;
-    margin-right: 7px;
-  }
+  background: #403A3E;
+  background: -webkit-linear-gradient(to right, #BE5869, #403A3E);
+  background: linear-gradient(to right, #BE5869, #403A3E);
 }
 
 .section.collections {
-  background-color: #3D8EB9;
+  background: #457fca;
+  background: -webkit-linear-gradient(to right, #457fca, #5691c8);
+  background: linear-gradient(to right, #457fca, #5691c8);
 }
 
 .section.get {
@@ -177,7 +135,11 @@ body {
       top: -60px;
     }
   }
-  background-color: #343e63;
+
+  background: #ED4264;
+  background: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);
+  background: linear-gradient(to right, #FFEDBC, #ED4264);
+
   .offer {
     text-align: center;
     font-size: 38px;
@@ -187,51 +149,80 @@ body {
 
   h2 {
     text-align: center;
-    // margin-bottom: 30px;
-  }
-
-  a:not(.button) {
-    border: none;
-    &:hover {
-      background: none;
-    }
-  }
-  .download {
-    margin: auto;
-    .button {
-      padding: 25px;
-      font-size: 25px;
-    }
   }
 }
 
 .section.main {
   p {
-    text-align: center;
-
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
-  .download-github {
-    margin-top: 50px;
-    font-size: 20px;
+
+  .hero-image {
+    margin-right: 80px;
+    img {
+      width: 280px;
+    }
   }
-  .phone-msg {
-    background:rgba(#343e63, 0.7);
-    color: white ;
-    text-shadow: none;
-    padding: 5px;
-    text-align: center;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .download {
+    // display: flex;
+  }
+
+  .download-prep {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .download-github {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .download-buttons {
+    display: flex;
+  }
+
+  .download-button {
+    text-decoration: none;
+    font-weight: 800;
+    transition: all .15s ease;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    &:hover {
+      // border: 0;
+      box-shadow: 0 8px 12px rgba(50,50,93,.4), 0 1px 3px rgba(0,0,0,.08);
+      outline: 0;
+      -webkit-transform: translateY(-1px);
+      transform: translateY(-1px);
+    }
+    text-transform: uppercase;
+    width: 150px;
+    height: 45px;
+    margin-right: 10px;
+  }
+
+  .hero-wrapper {
+    display: flex;
   }
 
   .hero-copy {
     margin-bottom: 35px;
-    font-size: 26px;
+    font-size: 24px;
   }
 
   h1 {
+    font-size: 3em;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    text-align: center;
-    margin-bottom: 30px;
   }
 }
 
@@ -256,14 +247,6 @@ body {
   -webkit-transition: opacity .5s ease;
 }
 
-.overlay-darken {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  background: rgba(0,0,0,.65);
-}
-
 .demo {
   width: 100%;
   display: flex;
@@ -272,6 +255,7 @@ body {
   video {
     width: 320px;
     height: 570px;
+    zoom: 0.95;
     border-radius: 5px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 20px;
     -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 20px;
@@ -287,13 +271,6 @@ body {
   text-align: center;
   height: 80px;
   font-size: 16px;
-  .social {
-    margin-bottom: 5px;
-    a {
-      width: 40px;
-      display: inline-block;
-    }
-  }
   .content {
     display: flex;
     flex-direction: column;
@@ -363,20 +340,6 @@ body {
 @media(max-width: 968px) {
   .overlay {
     background-size: inherit;
-  }
-  .download {
-    align-items: center;
-    .button {
-      display: block;
-      margin-bottom: 5px;
-      width: 175px;
-      font-size: 20px;
-      img {
-        width: 20px;
-        position: relative;
-        top: 2px;
-      }
-    }
   }
 }
 
@@ -487,10 +450,6 @@ body {
       width: 95%;
     }
   }
-  .download .button {
-    padding: 14px;
-    font-size: 14px;
-  }
 }
 
 @media(max-width: 400px) {
@@ -498,11 +457,6 @@ body {
     .content {
       width: 85%;
     }
-  }
-  .download .button {
-    padding: 10px;
-    font-size: 18px;
-    display: flex;
   }
 }
 
@@ -533,22 +487,11 @@ body {
       .offer { font-size: 20px; }
       h2 { font-size: 54px; }
     }
-    .download {
-      margin: 0;
-      width: 100%;
-      .button {
-        padding: 20px;
-        font-size: 20px;
-      }
-    }
   }
 }
 
 @media(max-width: 473px) {
   .section.main {
-    .download-github {
-      font-size: 14px;
-    }
     .hero-copy {
       margin-bottom: 0;
     }
@@ -613,12 +556,4 @@ body {
       }
     }
   }
-}
-
-.mac-icon {
-  position: relative;
-  bottom: 1px;
-}
-.phone-msg {
-  text-align: center;
 }

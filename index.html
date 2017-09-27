@@ -11,13 +11,13 @@
   <meta property="og:image"         content="http://headsetapp.co/images/og4.png" />
   <meta property="og:image:type"    content="image/png"/>
 
-  <title>Headset - Discover, collect and listen to music from YouTube</title>
+  <title>Headset - Discover, collect and play music on YouTube</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="images/favicon-48x48.png" sizes="48x48">
 
-  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
 <header class="main-header">
@@ -27,33 +27,58 @@
         <img src="images/Logo.png" alt="">
       </a>
     </div>
+    <div class="social">
+      <a href="https://www.facebook.com/headsethq/" target="_blank">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a href="https://twitter.com/headsetapp" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/headsetapp/headset-electron" target="_blank">
+        <i class="fa fa-github-alt" aria-hidden="true"></i>
+      </a>
+      <a href="mailto:hello@headsetapp.co" target="_blank">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      </a>
+    </div>
   </div>
 </header>
 <div id="fullpage">
   <div class="section main" data-anchor="home">
     <div class="overlay"></div>
-    <div class="overlay-darken"></div>
     <div class="wrapper">
       <div class="content">
-        <h1>YouTube Never <a>Sounded</a> So Good.</h1>
-        <p class="hero-copy">
-          Headset is a desktop app that turns YouTube into a world class music streaming service.
-          Create <a href="#collections">collections</a>, tune-in to a music <a href="#radio">subreddit</a>
-          or quickly play that <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">song</a>
-          you’ve had stuck in your head all day!
-        </p>
-        <div class="download">
-          <a href="https://github.com/headsetapp/headset-electron/releases/download/v1.5.2/Headset-1.5.2.dmg" class="button mac">
-            <img src="images/apple-icon.svg" width="25" class="mac-icon"/> macOs
-          </a>
+        <div class="hero-wrapper">
+          <div class="hero-image">
+            <img src="images/hs-hero.png" alt="">
+          </div>
+          <div class="hero-content">
+            <h1>Discover music on YouTube.</h1>
+            <p class="hero-copy">
+              Headset is a desktop application that turns YouTube into a world class music streaming service.
+              Create <a href="#collections">collections</a>, tune-in to a music <a href="#radio">subreddit</a>,
+              scrobble <a href="https://last.fm" target="_blank">last.fm</a>, or quickly play that <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">song</a>
+              you’ve had stuck in your head all day!
+            </p>
+            <div class="download">
+              <p class="download-prep">Download for macOS:</p>
+              <div class="download-buttons">
+                <a class="download-button" href="">.dmg</a>
+                <a class="download-button" href="">.zip</a>
+              </div>
+              <p class="download-github">Using a different OS? Check out the <a target="_blank" href="https://github.com/headsetapp/headset-electron">Github Repo</a> for build instructions.</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="download">
           <a href="https://github.com/headsetapp/headset-electron/releases/download/v1.5.4-win/HeadsetSetup.exe" class="button windows">
             <img src="images/windows-icon.png" width="32"/> Windows
           </a>
           <a href="https://github.com/headsetapp/headset-electron/releases/download/v1.5.4-deb/Headset_1.5.4_amd64.deb" class="button ubuntu">
             <img src="images/ubuntu-icon.png" width="32"/>Ubuntu
           </a>
-        </div>
-        <p class="download-github">Using a different OS? Check out our <a target="_blank" href="https://github.com/headsetapp/headset-electron">Github Repo</a> for build instructions.</p>
+        </div> -->
+
       </div>
     </div>
     <div class="scroll-more">
@@ -80,7 +105,7 @@
   <div class="section radio with-demo" data-anchor="radio">
     <div class="wrapper">
       <div class="content">
-      <h2>Radio, by Reddit.
+      <h2>Radio, by Reddit.</h2>
       <p>
         Find what to listen to next by following a music subreddits,
         with over 80 different stations, including <a target="_blank" href="https://reddit.com/r/listenToThis">/r/listenToThis</a>, <a target="_blank" href="https://reddit.com/r/90smusic">/r/90smusic</a>, <a target="_blank" href="https://reddit.com//r/electronic">/r/electronic</a> and many more.
@@ -135,15 +160,7 @@
     <div class="footer">
       <div class="content">
         <div class="social">
-          <a href="https://www.facebook.com/headsethq/" target="_blank">
-            <img src="images/facebook.svg" alt="" width="30px" height="30px">
-          </a>
-          <a href="https://twitter.com/headsetapp" target="_blank">
-            <img src="images/twitter.svg" alt="" width="30px" height="30px">
-          </a>
-          <a href="mailto:hello@headsetapp.co" target="_blank">
-            <img src="images/email.svg" alt="" width="30px" height="30px" style="display:inline-block;">
-          </a>
+
         </div>
         <div class="policy">
           <p class="copyright">
