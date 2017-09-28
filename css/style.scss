@@ -16,6 +16,8 @@ i {
 }
 
 body {
+  transition: opacity .2s ease;
+  opacity: 0;
   background: #c0392b;
   background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);
   background: linear-gradient(to right, #8e44ad, #c0392b);
@@ -43,8 +45,16 @@ body {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    transition: all .15s ease;
+    &:hover {
+      &.fb { color: #3b5998; }
+      &.tw { color: #1da1f2; }
+      &.gh { color: #333; }
+      &.em { color: #239ab9; }
+    }
   }
 }
+
 .logo {
   box-sizing: border-box;
   img {
@@ -85,22 +95,23 @@ body {
     letter-spacing: 0px;
   }
 
-  p {
+  .description {
     font-size: 26px;
     color: white;
     margin-top: 20px;
     line-height: 1.5;
   }
-
-  p a, p a:active {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    font-weight: bold;
-    border-bottom: 3px solid #1f246b;
-    transition: background .3s ease;
-    &:hover {
-      background: #1f246b;
+  p {
+    a, a:active {
+      color: white;
+      text-decoration: none;
+      position: relative;
+      font-weight: bold;
+      border-bottom: 3px solid #1f246b;
+      transition: background .3s ease;
+      &:hover {
+        background: #1f246b;
+      }
     }
   }
 }
@@ -116,9 +127,9 @@ body {
 }
 
 .section.radio {
-  background: #403A3E;
-  background: -webkit-linear-gradient(to right, #BE5869, #403A3E);
-  background: linear-gradient(to right, #BE5869, #403A3E);
+  background: #16222A;
+  background: -webkit-linear-gradient(to top, #3A6073, #16222A);
+  background: linear-gradient(to top, #3A6073, #16222A);
 }
 
 .section.collections {
@@ -133,6 +144,11 @@ body {
     .content {
       position: relative;
       top: -60px;
+    }
+    .download {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -152,6 +168,42 @@ body {
   }
 }
 
+.download-prep {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.download-github {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.download-buttons {
+  display: flex;
+}
+
+.download-button {
+  text-decoration: none;
+  font-weight: 800;
+  transition: all .15s ease;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid white;
+  &:hover {
+    background: none;
+    box-shadow: 0 8px 12px rgba(50,50,93,.4), 0 1px 3px rgba(0,0,0,.08);
+    outline: 0;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+  }
+  width: 150px;
+  height: 45px;
+  margin-right: 10px;
+}
+
 .section.main {
   p {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -161,6 +213,9 @@ body {
     margin-right: 80px;
     img {
       width: 280px;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 20px;
+      -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 20px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 1px 20px;
     }
   }
 
@@ -170,67 +225,20 @@ body {
     justify-content: center;
   }
 
-  .download {
-    // display: flex;
-  }
-
-  .download-prep {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-
-  .download-github {
-    font-size: 15px;
-    margin-top: 10px;
-  }
-
-  .download-buttons {
-    display: flex;
-  }
-
-  .download-button {
-    text-decoration: none;
-    font-weight: 800;
-    transition: all .15s ease;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    border: 1px solid white;
-    &:hover {
-      // border: 0;
-      box-shadow: 0 8px 12px rgba(50,50,93,.4), 0 1px 3px rgba(0,0,0,.08);
-      outline: 0;
-      -webkit-transform: translateY(-1px);
-      transform: translateY(-1px);
-    }
-    text-transform: uppercase;
-    width: 150px;
-    height: 45px;
-    margin-right: 10px;
-  }
-
   .hero-wrapper {
     display: flex;
   }
 
   .hero-copy {
-    margin-bottom: 35px;
-    font-size: 24px;
+    margin-bottom: 60px;
+    margin-top: 45px;
+    font-size: 22px;
+    line-height: 1.5;
   }
 
   h1 {
     font-size: 3em;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-  }
-}
-
-
-.section.get {
-  .button {
-    padding: 25px;
-    font-size: 18px;
   }
 }
 
@@ -251,8 +259,9 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 0;
   video {
+    z-index: 0;
     width: 320px;
     height: 570px;
     zoom: 0.95;
@@ -317,9 +326,6 @@ body {
     margin-top: 4px;
     font-size: 14px;
     font-weight: normal;
-    a:hover {
-      text-decoration: underline;
-    }
   }
 
 }

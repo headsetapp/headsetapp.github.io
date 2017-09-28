@@ -33,6 +33,9 @@ const initFullPageJs = () => {
     touchSensitivity: 0,
     onLeave(index, nextIndex, direction) {
       swapVideos(index, nextIndex)
+    },
+    afterRender() {
+      document.body.style.opacity = 1
     }
   });
 
@@ -60,25 +63,42 @@ const handleDownloadLinks = () => {
   const os = window.navigator.userAgent
   const baseUrl = "https://github.com/headsetapp/headset-electron/releases/download/v1.6.0/"
   const downloadsWrapper = $('.download')
+  let download;
+  let links = '';
+
   if (os.indexOf('Windows') !== -1) {
-    console.log('windows');
+    download = {
+      name: 'Windows',
+      links: [
+        { filename: 'HeadsetSetup.exe', label: '.exe (52.2 MB)'}
+      ]
+    }
   } else if (os.indexOf('Mac') !== -1) {
-    downloadsWrapper.html(`
-      Down
-      <a href="${baseUrl}/Headset-1.6.0.dmg" class="button mac">
-        <img src="images/apple-icon.svg" width="25" class="mac-icon"/> .dmg
-      </a>
-      <a href="${baseUrl}/Headset-1.6.0_mac.zip" class="button mac">
-        <img src="images/apple-icon.svg" width="25" class="mac-icon"/> .zip
-      </a>
-    `)
+    download = {
+      name: 'macOS',
+      links: [
+        { filename: 'Headset-1.6.0.dmg', label: '.dmg'},
+        { filename: 'Headset.1.6.0_mac.zip', label: '.zip'}
+      ]
+    }
   } else {
-    console.log('Linux');
+    download = {
+      name: 'Linux',
+      links: [
+        { filename: 'headset_1.6.0_amd64.deb', label: '.deb'},
+        { filename: 'headset-1.6.0.x86_64.rpm', label: '.rpm'}
+      ]
+    }
   }
+  $('.os').text(download.name)
+  download.links.forEach((link) => {
+    links += `<a class="download-button" href="${baseUrl}${link.filename}">${link.label}</a>`
+  })
+  $('.download-buttons').html(links)
 }
 
 $(document).ready(() => {
+  handleDownloadLinks()
   initFullPageJs()
   handleMobileDetection()
-  // handleDownloadLinks()
 });
