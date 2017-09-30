@@ -20,8 +20,10 @@ module.exports = {
       }, {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|webm|mp4)$/,
         loaders: ['file-loader']
-      },
-      {
+      }, {
+        test: /\.(txt)$/,
+        loaders: ['raw-loader']
+      }, {
        test: /\.(js)$/,
        use: 'babel-loader?presets[]=es2015',
        exclude: /(node_modules|bower_components)/,
