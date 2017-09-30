@@ -92,10 +92,14 @@ const handleDownloadLinks = () => {
     }
   }
   $('.os').text(download.name)
+
   download.links.forEach((link) => {
     links += `<a class="download-button" href="${baseUrl}/${link.tag}/${link.filename}">${link.label}</a>`
   })
-  $('.download-buttons').html(links)
+
+  $('.download-buttons').html(links).find('a').click((c) => {
+    ga('send', 'event', 'Download', current_tag);
+  })
 }
 
 $(document).ready(() => {
