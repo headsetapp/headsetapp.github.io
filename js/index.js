@@ -71,7 +71,7 @@ const handleDownloadLinks = () => {
     download = {
       name: 'Windows 7/8/10',
       links: [
-        { filename: 'HeadsetSetup.exe', label: 'Headset.exe (52.2 MB)', tag: 'v1.5.5-win' }
+        { filename: 'HeadsetSetup.exe', label: 'Headset.exe (52.2 MB)', tag: current_tag }
       ]
     }
   } else if (os.indexOf('Mac') !== -1) {
