@@ -285,9 +285,14 @@ body {
   .content {
     display: flex;
     flex-direction: column;
-  }
-  a {
-    border: none !important;
+    color: #545454;
+    a {
+      &:hover {
+        background: none;
+      }
+      color: #545454;
+      border: none;
+    }
   }
 }
 /* Overrides */
