@@ -78,23 +78,23 @@ const handleDownloadLinks = () => {
     download = {
       name: 'macOS',
       links: [
-        { filename: 'Headset-1.6.0.dmg', label: '.dmg', tag: current_tag},
-        { filename: 'Headset.1.6.0_mac.zip', label: '.zip', tag: current_tag}
+        { filename: `Headset-${current_tag}.dmg`, label: '.dmg', tag: current_tag},
+        { filename: `Headset.${current_tag}_mac.zip`, label: '.zip', tag: current_tag}
       ]
     }
   } else {
     download = {
       name: 'Linux',
       links: [
-        { filename: 'headset_1.6.0_amd64.deb', label: '.deb', tag: current_tag},
-        { filename: 'headset-1.6.0.x86_64.rpm', label: '.rpm', tag: current_tag}
+        { filename: `headset_${current_tag}_amd64.deb`, label: '.deb', tag: current_tag},
+        { filename: `headset-${current_tag}.x86_64.rpm`, label: '.rpm', tag: current_tag}
       ]
     }
   }
   $('.os').text(download.name)
 
   download.links.forEach((link) => {
-    links += `<a class="download-button" href="${baseUrl}/${link.tag}/${link.filename}">${link.label}</a>`
+    links += `<a class="download-button" href="${baseUrl}/v${link.tag}/${link.filename}">${link.label}</a>`
   })
 
   $('.download-buttons').html(links).find('a').click((c) => {
