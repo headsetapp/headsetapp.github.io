@@ -63,6 +63,7 @@ const handleMobileDetection = () => {
 const handleDownloadLinks = () => {
   const os = window.navigator.userAgent
   const baseUrl = "https://github.com/headsetapp/headset-electron/releases/download"
+  const releaseUrl = `https://github.com/headsetapp/headset-electron/releases/tag/v${current_tag}`
   const downloadsWrapper = $('.download')
   let download;
   let links = '';
@@ -91,7 +92,7 @@ const handleDownloadLinks = () => {
       ]
     }
   }
-  $('.os').text(download.name)
+  $('.os').text(`${download.name} (v${current_tag})` )
 
   download.links.forEach((link) => {
     links += `<a class="download-button" href="${baseUrl}/v${link.tag}/${link.filename}">${link.label}</a>`
@@ -100,6 +101,9 @@ const handleDownloadLinks = () => {
   $('.download-buttons').html(links).find('a').click((c) => {
     ga('send', 'event', 'Download', current_tag);
   })
+
+  // e.g https://github.com/headsetapp/headset-electron/releases/tag/v1.2.3
+  $('#release-link').attr('href', releaseUrl)
 }
 
 $(document).ready(() => {
