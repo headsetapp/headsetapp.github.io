@@ -148,6 +148,7 @@ body {
     }
     .download {
       display: flex;
+      display: -webkit-flex;
       flex-direction: column;
       align-items: center;
     }
@@ -181,6 +182,7 @@ body {
 
 .download-buttons {
   display: flex;
+  display: -webkit-flex;
 }
 
 .download-button {
@@ -189,6 +191,7 @@ body {
   transition: all .15s ease;
   color: white;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
@@ -213,6 +216,7 @@ body {
 
   .hero-image {
     margin-right: 80px;
+    min-width: 280px;
     img {
       width: 280px;
       -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 20px;
@@ -223,12 +227,14 @@ body {
 
   .hero-content {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     justify-content: center;
   }
 
   .hero-wrapper {
     display: flex;
+    display: -webkit-flex;
   }
 
   .hero-copy {
@@ -260,6 +266,7 @@ body {
 .demo {
   width: 100%;
   display: flex;
+  display: -webkit-flex;
   justify-content: center;
   z-index: 2;
   video {
@@ -284,6 +291,7 @@ body {
   font-size: 16px;
   .content {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     color: #545454;
     a {
