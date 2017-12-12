@@ -394,12 +394,17 @@ body {
 }
 
 @media(max-width: 760px) {
+  .offer {
+    margin-bottom: 20px !important;
+  }
   .featured {
     h2 {
-      font-size: 18px !important;
+      font-size: 15px !important;
     }
+    margin-bottom: 0;
     flex-wrap: wrap;
     .feature-gallery {
+      flex-direction: column;
       width: 100%;
       img {
         transform: scale(0.6);
@@ -410,6 +415,9 @@ body {
 
 // Main Section
 @media(max-width: 670px) {
+  .feature-gallery {
+
+  }
   .section.main {
     h1 { font-size: 48px; }
     .hero-copy { font-size: 24px; }
@@ -447,7 +455,6 @@ body {
 
 // Secion with video
 @media(max-width: 879px) {
-
   .demo video {
     height: 500px;
     width: 284px;
