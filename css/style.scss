@@ -388,6 +388,7 @@ body {
 }
 
 @media(max-width: 968px) {
+  font-size: 20px;
   .overlay {
     background-size: inherit;
   }
@@ -460,7 +461,7 @@ body {
     width: 284px;
   }
   .content {
-    h2 { font-size: 60px }
+    .content-title { font-size: 60px }
     p { font-size: 20px; }
   }
 }
