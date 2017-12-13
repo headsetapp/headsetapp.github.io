@@ -1,9 +1,7 @@
 "use strict"
 
-const fullpageStyles = require('fullpage.js/dist/jquery.fullpage.min.css');
 const styles = require('../css/style.scss');
 const $ = require('jquery');
-const fullpage = require('fullpage.js');
 const MobileDetect = require('mobile-detect');
 const current_tag = require('./tag.txt')
 
@@ -27,24 +25,6 @@ const swapVideos = (index, nextIndex) => {
   }
 }
 
-const initFullPageJs = () => {
-  $('#fullpage').fullpage({
-    navigation: true,
-    scrollBar: true,
-    touchSensitivity: 0,
-    onLeave(index, nextIndex, direction) {
-      swapVideos(index, nextIndex)
-    },
-    afterRender() {
-      document.body.style.opacity = 1
-    }
-  });
-
-  $('.scroll-arrow').click(() => {
-    $.fn.fullpage.moveSectionDown();
-  })
-}
-
 const handleMobileDetection = () => {
   if (md.mobile()) {
     // replace videos with images
@@ -54,8 +34,9 @@ const handleMobileDetection = () => {
     })
     $('.download').removeClass('download').html('<p class="phone-msg">Available for Windows, Mac and Linux.</p>')
     $('.download-github').remove()
-    $('.demo').click(function() {
-      $(this).toggleClass('active')
+  } else {
+    Object.keys(demos).forEach((i) => {
+      demos[i].play()
     })
   }
 }
@@ -108,6 +89,25 @@ const handleDownloadLinks = () => {
 
 $(document).ready(() => {
   handleDownloadLinks()
-  initFullPageJs()
   handleMobileDetection()
+
+  const scrollTop = () => {
+    return (window.pageYOffset || document.documentElement.scrollTop)
+  }
+
+  const header = $('.main-header')[0]
+
+  document.addEventListener('scroll', (e) => {
+    const scrollPosition = scrollTop()
+    header.style.opacity = 0.3;
+
+    setTimeout(() => {
+      const newScrollPosition = scrollTop()
+
+      if(scrollPosition === newScrollPosition) {
+        header.style.opacity = 1;
+        console.log('paw!');
+      }
+    }, 350)
+  })
 });
