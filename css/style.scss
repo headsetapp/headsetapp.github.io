@@ -70,7 +70,7 @@ p a {
 
 .feature-image {
   img {
-    width: 300px;
+    width: 330px;
   }
   text-align: center;
 }
@@ -106,45 +106,17 @@ p a {
   }
 }
 
-.feature-sig {
-  font-size: 14px;
-  color: #8c8c8c;
-}
-
-.feature {
-  border: 2px solid #f0f0f0;
-  font-size: 40px;
-  width: 300px;
-  height: 200px;
-  border-radius: 4px;
-  position: relative;
-  cursor: pointer;
+.tweets .content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  @include shadow-monster;
+  justify-content: space-around;
+  .twitter-tweet {
+    width: 328px !important;
+  }
+}
 
+.get {
   background: white;
-  &:before {
-    content: '';
-    border-radius: 4px 4px 0 0;
-    height: 12px;
-    background: #3b5998;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-  }
-  &.search {
-    &:before { background: #ff512f; }
-  }
-  &.radio {
-    &:before { background: #f8d030; }
-  }
-  &.collections {
-    &:before { background: #457fca; }
-  }
 }
 
 .description {
