@@ -80,7 +80,7 @@ const handleDownloadLinks = () => {
       name: 'macOS',
       links: [
         { filename: `Headset-${current_tag}.dmg`, label: '.dmg', tag: current_tag},
-        { filename: `Headset.${current_tag}_mac.zip`, label: '.zip', tag: current_tag}
+        { filename: `Headset-${current_tag}.zip`, label: '.zip', tag: current_tag}
       ]
     }
   } else {
