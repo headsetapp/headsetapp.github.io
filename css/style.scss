@@ -1,8 +1,9 @@
 @import './reset';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
 
-h1,h2,h3,h4,h5,h6, .button, .feature-sig {
+td, h1,h2,h3,h4,h5,h6, .button, .feature-sig {
   font-family: 'Open Sans', sans-serif;
+  color: #111111;
 }
 
 p,a,li,blockquote, input[type="email"] {
@@ -15,7 +16,7 @@ p,a,li,blockquote, input[type="email"] {
   transition: all ease 0.2s;
   &:hover {
     color: white;
-    // border: none;
+      // border: none;1px solid grey
     box-shadow: 0 8px 12px rgba(50,50,93,.4), 0 1px 3px rgba(0,0,0,.08);
     outline: 0;
     -webkit-transform: translateY(-2px);
@@ -30,6 +31,31 @@ body {
 
 i {
   font-style: italic;
+}
+
+.section {
+  padding: 120px 0;
+  &.main {
+    padding: 0;
+  }
+}
+
+.pricing-table {
+  max-width: 500px;
+  margin: auto;
+  &, td {
+    border: 1px solid rgba(214, 214, 214, 0.714);
+  }
+  table {
+    width:100%;
+  }
+  td {
+    text-align: center;
+    width: 50%;
+  }
+  .plans-row td {
+    font-size: 35px;
+  }
 }
 
 p a {
@@ -76,7 +102,6 @@ p a {
 }
 
 .features {
-  padding: 120px 0;
   background: white;
   box-shadow: 5px 0 10px rgba(0, 0, 0, .09);
 }
@@ -145,7 +170,6 @@ p a {
   a {
     margin-left: 10px;
     margin-right: 10px;
-    color: #111111;
     text-decoration: none;
     font-size: 20px;
     transition: all .15s ease;
@@ -276,7 +300,6 @@ p a {
   outline: 0;
   border: 1px solid #0073ff;
   background: none;
-  color: #111111;
   &:hover {
     @include shadow-monster;
     background: rgba(#0073ff,0.8);
