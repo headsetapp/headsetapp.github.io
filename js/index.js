@@ -5,7 +5,7 @@ const styles = require('../css/style.scss');
 const $ = require('jquery');
 const fullpage = require('fullpage.js');
 const MobileDetect = require('mobile-detect');
-const current_tag = require('./tag.txt')
+const CURRENT_TAG = require('../package.json').version
 
 const md = new MobileDetect(window.navigator.userAgent);
 const demos = {
@@ -63,7 +63,7 @@ const handleMobileDetection = () => {
 const handleDownloadLinks = () => {
   const os = window.navigator.userAgent
   const baseUrl = "https://github.com/headsetapp/headset-electron/releases/download"
-  const releaseUrl = `https://github.com/headsetapp/headset-electron/releases/tag/v${current_tag}`
+  const releaseUrl = `https://github.com/headsetapp/headset-electron/releases/tag/v${CURRENT_TAG}`
   const downloadsWrapper = $('.download')
   let download;
   let links = '';
@@ -72,34 +72,34 @@ const handleDownloadLinks = () => {
     download = {
       name: 'Windows 7/8/10',
       links: [
-        { filename: 'HeadsetSetup.exe', label: 'Headset.exe (52.2 MB)', tag: current_tag }
+        { filename: 'HeadsetSetup.exe', label: 'Headset.exe', tag: CURRENT_TAG }
       ]
     }
   } else if (os.indexOf('Mac') !== -1) {
     download = {
       name: 'macOS',
       links: [
-        { filename: `Headset-${current_tag}.dmg`, label: '.dmg', tag: current_tag},
-        { filename: `Headset-${current_tag}.zip`, label: '.zip', tag: current_tag}
+        { filename: `Headset-${CURRENT_TAG}.dmg`, label: '.dmg', tag: CURRENT_TAG},
+        { filename: `Headset-${CURRENT_TAG}.zip`, label: '.zip', tag: CURRENT_TAG}
       ]
     }
   } else {
     download = {
       name: 'Linux',
       links: [
-        { filename: `headset_${current_tag}_amd64.deb`, label: '.deb', tag: current_tag},
-        { filename: `headset-${current_tag}.x86_64.rpm`, label: '.rpm', tag: current_tag}
+        { filename: `headset_${CURRENT_TAG}_amd64.deb`, label: '.deb', tag: CURRENT_TAG},
+        { filename: `headset-${CURRENT_TAG}.x86_64.rpm`, label: '.rpm', tag: CURRENT_TAG}
       ]
     }
   }
-  $('.os').text(`${download.name} (v${current_tag})` )
+  $('.os').text(`${download.name} (v${CURRENT_TAG})` )
 
   download.links.forEach((link) => {
     links += `<a class="download-button" href="${baseUrl}/v${link.tag}/${link.filename}">${link.label}</a>`
   })
 
   $('.download-buttons').html(links).find('a').click((c) => {
-    ga('send', 'event', 'Download', current_tag);
+    ga('send', 'event', 'Download', CURRENT_TAG);
   })
 
   // e.g https://github.com/headsetapp/headset-electron/releases/tag/v1.2.3
