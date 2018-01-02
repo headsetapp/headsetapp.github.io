@@ -4,7 +4,6 @@ const styles = require('../css/style.scss');
 const $ = require('jquery');
 const MobileDetect = require('mobile-detect');
 const current_tag = require('./tag.txt')
-const Vivus = require('vivus')
 const md = new MobileDetect(window.navigator.userAgent);
 
 const handleDownloadLinks = () => {
@@ -57,5 +56,4 @@ const handleDownloadLinks = () => {
 
 $(document).ready(() => {
   handleDownloadLinks();
-  console.log(new Vivus('my-svg', {duration: 200}));
 });
