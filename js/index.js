@@ -42,7 +42,7 @@ const handleDownloadLinks = () => {
   $('.os').text(download.name)
 
   download.links.forEach((link) => {
-    links += `<a class="download-button" href="${baseUrl}/v${link.tag}/${link.filename}">${link.label}</a>`
+    links += `<a class="primary-button" href="${baseUrl}/v${link.tag}/${link.filename}">${link.label}</a>`
   })
 
   $('.download-buttons').html(links).find('a').click((c) => {
