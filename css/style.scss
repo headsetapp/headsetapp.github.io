@@ -410,10 +410,11 @@ display: flex;
   }
 
   .plan-description {
+    line-height: 1.5;
+    height: 75px;
     text-align: center;
     width: 100%;
     color: #6c6f73;
-    margin-bottom: 28px;
   }
 
   .plan-name {
@@ -436,18 +437,10 @@ display: flex;
     // text-transform: uppercase;
     width: 100%;
     padding: 15px;
-    // border-radius: 4px;
-    // font-size: 20px;
-    // cursor: pointer;
-    // -webkit-transition: all .2s ease;
-    // &:hover {
-    //   @include shadow-monster;
-    //   background: rgba(#0073ff,0.8);
-    // }
   }
 
   .duration {
-    font-size: 20px;
+    font-size: 25px;
     position: relative;
     right: 14px;
   }
