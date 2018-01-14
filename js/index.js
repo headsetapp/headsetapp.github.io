@@ -1,69 +1,16 @@
 "use strict"
 
-const fullpageStyles = require('fullpage.js/dist/jquery.fullpage.min.css');
 const styles = require('../css/style.scss');
 const $ = require('jquery');
-const fullpage = require('fullpage.js');
 const MobileDetect = require('mobile-detect');
-const CURRENT_TAG = require('../package.json').version
-
 const md = new MobileDetect(window.navigator.userAgent);
-const demos = {
-  2: document.querySelector('#search-demo'),
-  3: document.querySelector('#radio-demo'),
-  4: document.querySelector('#collections-demo'),
-}
+const axios = require('axios')
+const LATEST_RELEASE = 'https://api.github.com/repos/headsetapp/headset-electron/releases/latest'
 
-const swapVideos = (index, nextIndex) => {
-  const previousVideo = demos[index];
-  const nextVideo = demos[nextIndex];
-
-  if (previousVideo) {
-    previousVideo.pause()
-  }
-
-  if (nextVideo) {
-    nextVideo.play()
-  }
-}
-
-const initFullPageJs = () => {
-  $('#fullpage').fullpage({
-    navigation: true,
-    scrollBar: true,
-    touchSensitivity: 0,
-    onLeave(index, nextIndex, direction) {
-      swapVideos(index, nextIndex)
-    },
-    afterRender() {
-      document.body.style.opacity = 1
-    }
-  });
-
-  $('.scroll-arrow').click(() => {
-    $.fn.fullpage.moveSectionDown();
-  })
-}
-
-const handleMobileDetection = () => {
-  if (md.mobile()) {
-    // replace videos with images
-    const demos = ['search-demo', 'collections-demo','radio-demo'];
-    demos.forEach((demo) => {
-      $(`#${demo}`).replaceWith(`<img src='images/${demo}.png' id='${demo}' class='demo-image'/>`)
-    })
-    $('.download').removeClass('download').html('<p class="phone-msg">Available for Windows, Mac and Linux.</p>')
-    $('.download-github').remove()
-    $('.demo').click(function() {
-      $(this).toggleClass('active')
-    })
-  }
-}
-
-const handleDownloadLinks = () => {
+const handleDownloadLinks = (version) => {
   const os = window.navigator.userAgent
   const baseUrl = "https://github.com/headsetapp/headset-electron/releases/download"
-  const releaseUrl = `https://github.com/headsetapp/headset-electron/releases/tag/v${CURRENT_TAG}`
+  const releaseUrl = `https://github.com/headsetapp/headset-electron/releases/tag/v${version}`
   const downloadsWrapper = $('.download')
   let download;
   let links = '';
@@ -72,42 +19,49 @@ const handleDownloadLinks = () => {
     download = {
       name: 'Windows 7/8/10',
       links: [
-        { filename: 'HeadsetSetup.exe', label: 'Headset.exe', tag: CURRENT_TAG }
+        { filename: 'HeadsetSetup.exe', label: 'Headset.exe', version  }
       ]
     }
   } else if (os.indexOf('Mac') !== -1) {
     download = {
       name: 'macOS',
       links: [
-        { filename: `Headset-${CURRENT_TAG}.dmg`, label: '.dmg', tag: CURRENT_TAG},
-        { filename: `Headset-${CURRENT_TAG}.zip`, label: '.zip', tag: CURRENT_TAG}
+        { filename: `Headset-${version}.dmg`, label: '.dmg', version },
+        { filename: `Headset-${version}.zip`, label: '.zip', version }
       ]
     }
   } else {
     download = {
       name: 'Linux',
       links: [
-        { filename: `headset_${CURRENT_TAG}_amd64.deb`, label: '.deb', tag: CURRENT_TAG},
-        { filename: `headset-${CURRENT_TAG}.x86_64.rpm`, label: '.rpm', tag: CURRENT_TAG}
+        { filename: `headset_${version}_amd64.deb`, label: '.deb', version },
+        { filename: `headset-${version}.x86_64.rpm`, label: '.rpm', version }
       ]
     }
   }
-  $('.os').text(`${download.name} (v${CURRENT_TAG})` )
+
+  $('.os').text(download.name)
 
   download.links.forEach((link) => {
-    links += `<a class="download-button" href="${baseUrl}/v${link.tag}/${link.filename}">${link.label}</a>`
+    links += `<a class="primary-button" href="${baseUrl}/v${link.version}/${link.filename}">${link.label}</a>`
   })
 
   $('.download-buttons').html(links).find('a').click((c) => {
-    ga('send', 'event', 'Download', CURRENT_TAG);
+    ga('send', 'event', 'Download', version);
   })
 
   // e.g https://github.com/headsetapp/headset-electron/releases/tag/v1.2.3
   $('#release-link').attr('href', releaseUrl)
 }
 
+const getLatestTag = () => {
+  return axios.get(LATEST_RELEASE).then((response) => {
+    return response.data.tag_name;
+  })
+}
+
 $(document).ready(() => {
-  handleDownloadLinks()
-  initFullPageJs()
-  handleMobileDetection()
+  getLatestTag().then((tag) => {
+    handleDownloadLinks(tag.replace('v', ''));
+  })
 });
