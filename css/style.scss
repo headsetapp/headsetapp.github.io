@@ -8,7 +8,9 @@ td, h1,h2,h3,h4,h5,h6, .button, .feature-sig {
   font-family: 'Open Sans', sans-serif;
   color: #111111;
 }
-
+h2 {
+  font-size: 30px;
+}
 .text-center {
   text-align: center !important;
 }
@@ -42,8 +44,6 @@ body {
 i {
   font-style: italic;
 }
-
-
 
 .section {
   padding: 120px 0;
