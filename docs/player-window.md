@@ -1,2 +1,5 @@
-<title>Player Window</title>
-# PLAYER WINDOW
+---
+layout: document
+title: PLAYER WINDOW
+---
+## what is that?
