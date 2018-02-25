@@ -2,7 +2,6 @@
 version: 1.6.4
 name: Headset • Simple music player for YouTube
 title: Headset Docs
-description: Some description
 url: https://headsetapp.co
 repository: https://github.com/headsetapp/headset-electron
 twitter:
