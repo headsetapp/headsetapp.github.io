@@ -1,16 +1,31 @@
 @import '../css/reset.css';
 
 .document p {
-  font-size: 18px;
-  margin: 14px 0;
-  line-height: 1.2;
+  font-size: 23px;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.document p, .document ul {
+  margin-top: 14px;
+  margin-bottom: 25px;
 }
 
 .document h3 {
-  font-size: 22px;
+  font-size: 26px;
+  font-weight: 400;
 }
 
 .document ul {
   list-style-type: circle;
   margin-left: 10px;
+}
+
+.document h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+
 }
