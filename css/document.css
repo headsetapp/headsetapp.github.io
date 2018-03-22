@@ -1,20 +1,19 @@
 @import '../css/reset.css';
 
-.document p {
+.document p, .document li {
   font-size: 23px;
-  margin: auto;
   font-weight: 100;
-  line-height: 1.6;
+  line-height: 1.3;
 }
 
 .document p, .document ul {
-  margin-top: 14px;
-  margin-bottom: 25px;
+  margin-top: 15px;
 }
 
 .document h3 {
   font-size: 26px;
   font-weight: 400;
+  margin-top: 50px;
 }
 
 .document ul {
@@ -27,5 +26,9 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
+}
 
+.document .section.main {
+  background: white;
+  padding: 70px 0;
 }
