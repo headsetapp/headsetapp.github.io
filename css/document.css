@@ -8,6 +8,7 @@
 
 .document p, .document ul {
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .document h3 {
