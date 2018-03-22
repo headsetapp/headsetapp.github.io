@@ -1,6 +1,7 @@
 ---
 title: FAQ
 ---
+# FAQ
 
 ### Q: What is Headset?
 Headset is a music player for desktop that is able to connect to YouTube. Users can search through YouTube's massive collection of music, play what they find and save tracks/playlists. Headset can also read popular music [subreddits](https://www.youtube.com/watch?v=EvEcBq5yWGw) and play the tracks in sequense.

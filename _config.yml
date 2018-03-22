@@ -11,4 +11,3 @@ exclude:
 - ".gitignore"
 - CNAME
 - readme.md
-theme: jekyll-theme-cayman

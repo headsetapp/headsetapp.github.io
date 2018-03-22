@@ -1,23 +1,16 @@
 @import '../css/reset.css';
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Sans+Pro:300,300italic,700);
-
-h1,h2,h3,h4,h5,h6, .button {
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
+.document p {
+  font-size: 18px;
+  margin: 14px 0;
+  line-height: 1.2;
 }
 
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
+.document h3 {
+  font-size: 22px;
 }
 
-.wrapper {
-  width: 730px;
-  max-width: 730px;
-  margin: auto;
-}
-
-h3 {
-  font-weight: 18px;
+.document ul {
+  list-style-type: circle;
+  margin-left: 10px;
 }
