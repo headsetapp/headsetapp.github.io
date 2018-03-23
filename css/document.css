@@ -15,15 +15,16 @@
   font-size: 26px;
   font-weight: 400;
   margin-top: 50px;
+  font-weight: bold;
 }
 
 .document ul {
-  list-style-type: circle;
-  margin-left: 10px;
+  list-style-type: disc;
+  margin-left: 30px;
 }
 
 .document ul li {
-  list-style-type: circle;
+  list-style-type: disc;
 }
 
 .document h1 {

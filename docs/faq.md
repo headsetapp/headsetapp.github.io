@@ -10,7 +10,7 @@ Headset is a music player for desktop that is able to connect to YouTube. Users 
 
 - Windows 7 and later
 - macOS 10.9
-- Ubuntu 12.04 and later
+- Ubuntu 14.04 and later
 - Fedora 21
 - Debian 8
 
