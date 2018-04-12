@@ -19,7 +19,7 @@ const handleDownloadLinks = (version) => {
     download = {
       name: 'Windows 7/8/10',
       links: [
-        { filename: 'HeadsetSetup.exe', label: 'Headset.exe', version  }
+        { filename: `headset-${version}-setup.exe`, label: 'Headset.exe', version }
       ]
     }
   } else if (os.indexOf('Mac') !== -1) {
