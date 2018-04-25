@@ -361,10 +361,9 @@ p a {
   h1 {
     max-width: 700px;
     text-align: center;
-    font-weight: 400;
     font-size: 3em;
     line-height: 1.2;
-    font-weight: bold;
+    font-weight: 100;
     @media(max-width: $mobile) {
       font-size: 2em;
     }
