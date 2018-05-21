@@ -26,8 +26,8 @@ const handleDownloadLinks = (version) => {
     download = {
       name: 'macOS',
       links: [
-        { filename: `Headset-${version}.dmg`, label: '.dmg', version },
-        { filename: `Headset-${version}.zip`, label: '.zip', version }
+        { filename: `Headset-${version}.dmg`, label: 'Download .dmg', version },
+        { filename: `Headset-${version}.zip`, label: 'Download .zip', version }
       ]
     }
   } else {
@@ -61,7 +61,7 @@ const getLatestTag = () => {
 }
 
 $(document).ready(() => {
-  getLatestTag().then((tag) => {
-    handleDownloadLinks(tag.replace('v', ''));
-  })
+  // getLatestTag().then((tag) => {
+  //   handleDownloadLinks(tag.replace('v', ''));
+  // })
 });

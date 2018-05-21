@@ -18,7 +18,7 @@ module.exports = {
           use: ['css-loader', 'sass-loader']
         })
       }, {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|webm|mp4)$/,
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|webm|mp4|otf)$/,
         loaders: ['file-loader']
       }, {
         test: /\.(txt)$/,
