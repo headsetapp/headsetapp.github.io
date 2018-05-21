@@ -19,7 +19,7 @@ b {
   font-weight: bold;
 }
 
-p,a,li,blockquote, input[type="email"] {
+small, p,a,li,blockquote, input[type="email"] {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   color: #111111;
@@ -76,9 +76,9 @@ p a {
 
 .wrapper {
   height: 100%;
-  width: 90%;
+  width: 95%;
   margin: auto;
-  max-width: 1024px;
+  max-width: 1260px;
   overflow: hidden;
 }
 
@@ -466,6 +466,12 @@ p a {
 
 .pricing {
   background: white;
+  .usd-astrix {
+    margin-top: 30px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
 }
 
 .social {
@@ -487,6 +493,31 @@ p a {
       &.sl  {background: #e01563}
     }
   // }
+}
+
+.section.pro {
+  width: 100%;
+  background-image: url(/images/sierra.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .content-text {
+    color: white;
+    font-weight: normal;
+  }
+
+  .pro-features {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+    .pro-feature {
+      img {
+        width: 350px;
+        height: auto;
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      }
+    }
+  }
 }
 
 .pricing-table {
@@ -578,4 +609,16 @@ footer {
   font-size: 34px;
   position: relative;
   top: 33px;
+}
+
+.pro-badge {
+  position: relative;
+  background: #FFDD1B;
+  color: #011f29;
+  font-weight: bold;
+  padding: 0 2px;
+  border-radius: 4px;
+  font-size: 30px;
+  vertical-align: middle;
+  bottom: 1px;
 }
