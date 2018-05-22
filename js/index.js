@@ -7,7 +7,7 @@ const md = new MobileDetect(window.navigator.userAgent);
 const axios = require('axios')
 const LATEST_RELEASE = 'https://api.github.com/repos/headsetapp/headset-electron/releases/latest'
 
-const handleDownloadLinks = (version) => {
+function handleDownloadLinks(version) {
   const os = window.navigator.userAgent
   const baseUrl = "https://github.com/headsetapp/headset-electron/releases/download"
   const releaseUrl = `https://github.com/headsetapp/headset-electron/releases/tag/v${version}`
@@ -49,7 +49,6 @@ const handleDownloadLinks = (version) => {
   const downloadSelector = document.createElement('div')
   downloadSelector.innerHTML = links
   downloadSelector.id = 'dl-selector'
-  downloadSelector.style = { display: 'none' }
   document.body.appendChild(downloadSelector)
 
   tippy('.download-button', {
@@ -63,9 +62,22 @@ const handleDownloadLinks = (version) => {
   })
 }
 
-const getLatestTag = () => {
+function getLatestTag () {
   return axios.get(LATEST_RELEASE).then((response) => {
     return response.data.tag_name;
+  })
+}
+
+function makeProSliders(id) {
+  const proBubble = document.getElementById(id)
+
+  tippy(`#${id}-img`, {
+    html: proBubble,
+    placement: 'top',
+    arrow: true,
+    theme: 'honeybee',
+    delay: 200,
+    distance: 30,
   })
 }
 
@@ -73,4 +85,8 @@ $(document).ready(() => {
   getLatestTag().then((tag) => {
     handleDownloadLinks(tag.replace('v', ''));
   })
+
+  makeProSliders('album-mode')
+  makeProSliders('party-shuffle')
+  makeProSliders('radio-insights')
 });

@@ -40,6 +40,8 @@ h2 {
   font-size: 30px;
 }
 
+
+
 .main-header {
   position: absolute;
   width: 100%;
@@ -90,12 +92,41 @@ h2 {
     }
   }
   .hero-image {
-    img {
+    position: relative;
+    .macbook {
       width: 100%;
+    }
+    .mac-screen {
+      top: 77px;
+      left: 120px;
+      right: 120px;
+      bottom: 110px;
+      background-image: url(/images/mac-background.jpg);
+      position: absolute;
+      overflow: hidden;
+    }
+
+    .roller {
+      img {
+        width: 910px;
+        animation: roller 100s linear;
+      }
+      left: -436px;
+      top: -422px;
+      transform: rotate(40deg);
+      position: absolute;
     }
   }
 }
 
+.unsplash {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 100;
+}
 .section.featured-on {
   padding-top: 30px;
   background: white;
@@ -419,6 +450,7 @@ p a {
 
 .tippy-arrow {
   border-bottom-color: white !important;
+  border-top-color: white !important;
 }
 
 .tippy-tooltip.honeybee-theme {
@@ -428,7 +460,7 @@ p a {
   font-weight: bold;
   color: #333;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .download-buttons {
@@ -538,6 +570,11 @@ p a {
 }
 
 .section.pro {
+  .pro-badge {
+    font-size: 18px;
+    bottom: 0;
+  }
+  overflow: hidden;
   padding: 120px 0;
   width: 100%;
   background-image: url(/images/sierra.jpg);
@@ -548,23 +585,71 @@ p a {
     h2 {
       color: #333;
       font-weight: bold;
+      font-size: 45px;
     }
   }
   .home-feature-block-text {
+    max-width: 600px;
+    margin: 40px auto;
+    margin-bottom: 100px;
     p {
       color: white;
+      font-size: 20px;
     }
   }
   .pro-features {
     display: flex;
     justify-content: space-between;
     .pro-feature {
+      // transform: translateY(25%);
+      transition: all .3s ease;
       img {
-        width: 350px;
+        width: 320px;
         height: auto;
+      }
+      &:hover {
+        transform: translateY(40%);
       }
     }
   }
+}
+
+#radio-insights {
+  h3 {
+    border-bottom: 4px solid rgba(#448bf0,0.7);
+  }
+}
+
+#album-mode {
+  h3 {
+    border-bottom: 4px solid rgba(#f5353b,0.7);
+  }
+}
+
+#party-shuffle {
+  h3 {
+    border-bottom: 4px solid rgba(#ffa834,0.7);
+  }
+}
+
+.bubble {
+  // height: 160px;
+  border-radius: 13px;
+  text-align: left;
+  padding: 11px;
+  h3 {
+    padding-bottom: 3px;
+    margin-bottom: 6px;
+    font-size: 20px;
+  }
+  p {
+    line-height: 26px;
+    font-size: 16px;
+  }
+}
+
+.tippy-content {
+  border-radius: 13px;
 }
 
 .pricing-table {
@@ -704,4 +789,13 @@ footer {
 
 #dl-selector {
   display: none;
+}
+
+@keyframes roller {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }

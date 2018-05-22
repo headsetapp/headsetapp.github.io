@@ -63,7 +63,13 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="images/macbook-hero.svg" alt="">
+            <div class="mac-screen">
+              <div class="roller">
+                <img src="images/roller.png" alt="">
+              </div>
+              <span class="unsplash">Photo by eberhard grossgasteiger on Unsplash</span>
+            </div>
+            <img class="macbook" src="images/macbook-hero.svg" alt="">
           </div>
         </div>
       </div>
@@ -104,7 +110,8 @@
               <h2>The World’s Largest Music Library</h2>
             </div>
             <div class="home-feature-block-text">
-              <p>YouTube, the most powerful search engine in the world is at your service. You can find massive hits to rare gems to cult classics, with more added every minute. It’s more music than you could listen to in a lifetime.</p>
+              <p>YouTube, the most powerful search engine in the world is at your service. You can find massive hits to rare
+                gems to cult classics, with more added every minute. It’s more music than you could listen to in a lifetime.</p>
             </div>
           </div>
           <div class="center-image">
@@ -121,7 +128,8 @@
           <img src="images/scale.svg" alt="">
           <h4>Cross Platform</h4>
           <p>Headset is available for Windows, Linux (Debian, Redhat) and MacOs. You can even build it from source on a custom
-            environment.</p>
+            environment.
+          </p>
         </div>
         <div class="sub-category">
           <img src="images/cdn.svg" alt="">
@@ -138,7 +146,8 @@
           <img src="images/hosting.svg" alt="">
           <h4>Private and Secure</h4>
           <p>All data, credentials, and cookies are transmitted over a secure SSL connection, to keep you invisible over the
-            network.</p>
+            network.
+          </p>
         </div>
         <div class="sub-category">
           <img src="images/realtime.svg" alt="">
@@ -164,7 +173,9 @@
             <h2>Say Hello to New Music</h2>
           </div>
           <div class="home-feature-block-text">
-            <p>Discover Music like never before. With music submitted by Reddit users for the users. The good music gets upvoted to the top and the trash is downvoted to oblivion. Each time you come back you'll find new beats to keep you going.</p>
+            <p>Discover Music like never before. With music submitted by Reddit users for the users. The good music gets upvoted
+              to the top and the trash is downvoted to oblivion. Each time you come back you'll find new beats to keep you
+              going.</p>
           </div>
         </div>
       </div>
@@ -216,7 +227,9 @@
             <h2>Make it Yours</h2>
           </div>
           <div class="home-feature-block-text">
-            <p>Build a collection of your favorites, so they’re always close at hand. Follow playlists and channels directly from YouTube, keep a "listen later" list of songs, or even capture hours of free MIT courses and TED talks. The possibilities are endless.</p>
+            <p>Build a collection of your favorites, so they’re always close at hand. Follow playlists and channels directly
+              from YouTube, keep a "listen later" list of songs, or even capture hours of free MIT courses and TED talks.
+              The possibilities are endless.</p>
           </div>
         </div>
         <div class="center-image">
@@ -244,13 +257,25 @@
       </div>
       <div class="pro-features">
         <div class="pro-feature">
-          <img src="images/hiphop.png" alt="">
+          <div class="bubble" id="album-mode">
+            <h3>Album Mode</h3>
+            <p>Headset can read the video description and intelengetly convert it into digestable and organized queue. Perfect for full albums, concerts and long pieces of content.</p>
+          </div>
+          <img class="app-image" id="album-mode-img" src="images/hiphop.png" alt="">
         </div>
         <div class="pro-feature">
-          <img src="images/party.png" alt="">
+          <div class="bubble" id="party-shuffle">
+            <h3>Party Shuffle 🎉</h3>
+            <p>Let the pary begin! Mix all your favourite radio station and make unique, diverse, non-stop playlists. Your earbuds (and party guests) will thank you.</p>
+          </div>
+          <img class="app-image" id="party-shuffle-img" src="images/party.png" alt="">
         </div>
         <div class="pro-feature">
-          <img src="images/pogo.png" alt="">
+          <div class="bubble" id="radio-insights">
+            <h3>Radio Insights</h3>
+            <p>Dive into any genere and explore the top songs of the day/week/month/year and all-time! You'll be the first to know what's new, what's popular or conversational.</p>
+          </div>
+          <img class="app-image" id="radio-insights-img" src="images/pogo.png" alt="">
         </div>
       </div>
     </div>
@@ -285,7 +310,16 @@
           </div>
           <div class="feature-row">
             <p>
+              <b>Regular</b> OS Updates</p>
+          </div>
+          <div class="feature-row">
+            <p>
               <b>No</b> access to Pro features</p>
+          </div>
+          <div class="feature-row">
+            <p>
+              <b>Limited</b> Support
+            </p>
           </div>
           <div class="download">
             <div class="download-buttons">
@@ -295,7 +329,7 @@
         </div>
         <div class="column">
           <h4 class="plan-name">Pro</h4>
-          <h3 class="plan-price">$2
+          <h3 class="plan-price">$1.99
             <span class="duration">/month*</span>
           </h3>
           <p class="plan-description">
@@ -315,7 +349,18 @@
           </div>
           <div class="feature-row">
             <p>
-              <b>Unlimited</b> access to Pro features</p>
+              <b>Regular</b> OS Updates</p>
+          </div>
+          <div class="feature-row">
+            <p>
+              <b>Unlimited</b> access to
+              <a href="#pro">Pro features</a>
+            </p>
+          </div>
+          <div class="feature-row">
+            <p>
+              <b>Premium</b> Support
+            </p>
           </div>
           <div class="download">
             <div class="download-buttons">
@@ -387,37 +432,67 @@
     <div class="wrapper">
       <div class="footer-grid">
         <div class="col-0">
-          <img class="round-logo" src="images/Headset-64px.png" alt=""> <img src="images/Logo.png" class="text-logo" alt="">
+          <img class="round-logo" src="images/Headset-64px.png" alt="">
+          <img src="images/Logo.png" class="text-logo" alt="">
           <p>Headset is simple music player for busy people everywhere.</p>
         </div>
         <div class="col-1">
           <p>Product</p>
           <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pro">Headset <span class="pro-badge">Pro</span></a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a target="_blank" href="/docs/faq">FAQ</a></li>
-            <li><a target="_blank" href="https://github.com/headsetapp/headset-electron/issues">Submit an Issue</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
+            <li>
+              <a href="#features">Features</a>
+            </li>
+            <li>
+              <a href="#pro">Headset
+                <span class="pro-badge">Pro</span>
+              </a>
+            </li>
+            <li>
+              <a href="#pricing">Pricing</a>
+            </li>
+            <li>
+              <a target="_blank" href="/docs/faq">FAQ</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/headsetapp/headset-electron/issues">Submit an Issue</a>
+            </li>
+            <li>
+              <a href="/terms">Terms of Service</a>
+            </li>
+            <li>
+              <a href="/privacy">Privacy Policy</a>
+            </li>
           </ul>
         </div>
         <div class="col-2">
           <p>Contact Us</p>
           <ul>
-            <li><a target="_blank" href="mailto:hello@headsetapp.co">Email</a></li>
-            <li><a target="_blank" href="https://www.facebook.com/headsethq/">Facebook</a></li>
-            <li><a target="_blank" href="https://twitter.com/headsetapp">Twitter</a></li>
-            <li><a target="_blank" href="https://join.slack.com/t/headsetapp/shared_invite/enQtMjI2MDc1NjUwODA0LWVkZGMwZDE5Mzg1NWU3YmUzNWNkODk1MjY5NjZjMjQ5YmEwMjA0ZjM4MGMzMmNkOGY2NGM2M2Y5NDZlNDFkMTc">Slack</a></li>
-            <li><a target="_blank" href="https://www.instagram.com/headsethq/">Instagram</a></li>
-            <li><a target="_blank" href="https://github.com/headsetapp/headset-electron">Github</a></li>
+            <li>
+              <a target="_blank" href="mailto:hello@headsetapp.co">Email</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/headsethq/">Facebook</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://twitter.com/headsetapp">Twitter</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://join.slack.com/t/headsetapp/shared_invite/enQtMjI2MDc1NjUwODA0LWVkZGMwZDE5Mzg1NWU3YmUzNWNkODk1MjY5NjZjMjQ5YmEwMjA0ZjM4MGMzMmNkOGY2NGM2M2Y5NDZlNDFkMTc">Slack</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.instagram.com/headsethq/">Instagram</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/headsetapp/headset-electron">Github</a>
+            </li>
           </ul>
         </div>
       </div>
       <div class="copy-section">
         <p>
-          Built and designed by Alignment Digital <br>
-          Copyright <span id="copy-year"></span> All rights reserved.
+          Built and designed by Alignment Digital
+          <br> Copyright
+          <span id="copy-year"></span> All rights reserved.
         </p>
       </div>
     </div>
