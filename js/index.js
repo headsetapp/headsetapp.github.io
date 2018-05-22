@@ -19,36 +19,52 @@ const handleDownloadLinks = (version) => {
     download = {
       name: 'Windows 7/8/10',
       links: [
-        { filename: `headset-${version}-setup.exe`, label: 'Headset.exe', version }
+        { filename: `headset-${version}-setup.exe`, label: 'Download for Windows', version }
       ]
     }
   } else if (os.indexOf('Mac') !== -1) {
     download = {
       name: 'macOS',
       links: [
-        { filename: `Headset-${version}.dmg`, label: 'Download .dmg', version },
-        { filename: `Headset-${version}.zip`, label: 'Download .zip', version }
+        { filename: `Headset-${version}.dmg`, label: 'Download for macOS (.dmg)', version },
+        { filename: `Headset-${version}.zip`, label: 'Download for macOS (.zip)', version }
       ]
     }
   } else {
     download = {
       name: 'Linux',
       links: [
-        { filename: `headset_${version}_amd64.deb`, label: '.deb', version },
-        { filename: `headset-${version}.x86_64.rpm`, label: '.rpm', version }
+        { filename: `headset_${version}_amd64.deb`, label: 'Download for Linux (.deb)', version },
+        { filename: `headset-${version}.x86_64.rpm`, label: 'Download for Linux (.rpm)', version }
       ]
     }
   }
 
-  $('.os').text(download.name)
-
   download.links.forEach((link) => {
-    links += `<a class="primary-button" href="${baseUrl}/v${link.version}/${link.filename}">${link.label}</a>`
+    links += `<a class="" href="${baseUrl}/v${link.version}/${link.filename}">${link.label}</a>`
   })
 
-  $('.download-buttons').html(links).find('a').click((c) => {
-    ga('send', 'event', 'Download', version);
+  links += `<a class="" href="${releaseUrl}">Other Environments</a>`
+
+  const downloadSelector = document.createElement('div')
+  downloadSelector.innerHTML = links
+  downloadSelector.id = 'dl-selector'
+  downloadSelector.style = { display: 'none' }
+  document.body.appendChild(downloadSelector)
+
+  tippy('.download-button', {
+    html: '#dl-selector',
+    placement: 'bottom',
+    interactive: true,
+    arrow: true,
+    theme: 'honeybee',
+    animation: 'shift-toward',
+    trigger: 'click'
   })
+
+  // $('.download-buttons').html(links).find('a').click((c) => {
+  //   ga('send', 'event', 'Download', version);
+  // })
 
   // e.g https://github.com/headsetapp/headset-electron/releases/tag/v1.2.3
   $('#release-link').attr('href', releaseUrl)
@@ -61,7 +77,7 @@ const getLatestTag = () => {
 }
 
 $(document).ready(() => {
-  // getLatestTag().then((tag) => {
-  //   handleDownloadLinks(tag.replace('v', ''));
-  // })
+  getLatestTag().then((tag) => {
+    handleDownloadLinks(tag.replace('v', ''));
+  })
 });

@@ -7,11 +7,17 @@
 }
 
 .document p,
+.document li,
 .document h1,
 .document h2,
 .document h3,
 .document h4 {
   font-family: Helvetica, sans-serif;
+}
+.document ul, .document li {
+  margin: 0;
+  padding: 0;
+
 }
 .document p {
   margin-top: 15px;

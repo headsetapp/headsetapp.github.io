@@ -113,7 +113,7 @@ h2 {
     padding-bottom: 40px;
   }
   .partial-company-company {
-    width: 950px;
+    width: 1020px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -369,13 +369,62 @@ p a {
   }
 }
 
+.tippy-content {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: white;
+  a {
+    display: block;
+    padding: 14px;
+    text-decoration: none;
+    color: #656565;
+    transition: all .2s ease;
+    text-align: left;
+    font-size: 16px;
+    &:nth-child(1) {
+      &:hover {
+        background: #e9f2fd;
+        color: #448bf0;
+      }
+    }
+    &:nth-child(2) {
+      &:hover {
+        background: #fff5e7;
+        color: #ffa834;
+      }
+    }
+    &:nth-child(3) {
+      &:hover {
+        background: #fddfe0;
+        color: #f5353b;
+      }
+    }
+  }
+}
+
+.tippy-arrow {
+  border-bottom-color: white !important;
+}
+
+.tippy-tooltip.honeybee-theme {
+  background-color: white;
+  padding: 4px;
+  width: 300px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius: 4px;
+}
+
 .download-buttons {
   display: flex;
 }
 
 .primary-button {
-  margin: 0 4px;
   cursor: pointer;
+  margin: 0 4px;
   text-decoration: none;
   font-weight: 800;
   transition: all .2s ease;
