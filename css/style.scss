@@ -799,3 +799,82 @@ footer {
     transform: translateY(-100%);
   }
 }
+
+@media(max-width: 600px) {
+  .section.hero .hero-image .mac-screen {
+    top: 36px;
+    left: 60px;
+    right: 60px;
+    bottom: 45px;
+  }
+
+  .section.hero .hero-image .roller {
+    left: -127px;
+    top: -82px;
+    img {
+      width: 300px;
+    }
+  }
+
+  .main-menu {
+    display: none;
+  }
+  .hero-section-copy {
+    text-align: center;
+  }
+  .partial-company-company {
+    flex-direction: column;
+    .partial-company-logo {
+      margin-bottom: 22px;
+    }
+  }
+  .center-of-attention {
+    flex-direction: column;
+    .center-image {
+      margin-bottom: 30px;
+    }
+  }
+  .section.sub .sub-feature-grid {
+    align-items: center;
+  }
+
+  .testimonial-grid {
+    flex-direction: column;
+  }
+
+  .section.testimonials .testimonial-grid .testimonial {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .section.pro .pro-features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pro-feature {
+    margin-bottom: 50px;
+  }
+
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+    .plan-price {
+      text-align: center;
+    }
+    .column {
+      margin-bottom: 50px;
+    }
+  }
+  .twitter-grid {
+    flex-flow: initial;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  footer .footer-grid {
+    flex-direction: column;
+    .col-0,.col-1,.col-2 {
+      margin-bottom: 30px;
+    }
+  }
+}
