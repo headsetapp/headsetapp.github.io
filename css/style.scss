@@ -437,6 +437,14 @@ p a {
   background: white;
 }
 
+.section .left-content {
+  width: 420px;
+  p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
 .section.testimonials {
   background: #0C1C5E;
   .testimonial-header {
@@ -509,7 +517,6 @@ p a {
   .pro-features {
     display: flex;
     justify-content: space-between;
-    margin: 80px 0;
     .pro-feature {
       img {
         width: 350px;
