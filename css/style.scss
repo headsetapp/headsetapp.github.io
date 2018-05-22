@@ -194,6 +194,30 @@ p a {
   }
 }
 
+.section.sub {
+  .sub-feature-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+  background: white;
+  .sub-category {
+    width: 300px;
+    margin-bottom: 40px;
+    h4 {
+      color: #444;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    p {
+      color: #8596A7;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+
 .feature-title {
   font-size: 3em;
   margin-bottom: 20px;
@@ -203,8 +227,11 @@ p a {
   }
 }
 
-.twitter-content {
-  margin-top: 30px;
+.twitter-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: row wrap;
 }
 
 .feature-image {
@@ -406,17 +433,79 @@ p a {
   // }
 }
 
+.section.collect {
+  background: white;
+}
+
+.section.testimonials {
+  background: #0C1C5E;
+  .testimonial-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+    h2 {
+      font-size: 36px;
+      font-weight: 300;
+    }
+  }
+  .testimonial-grid {
+    display: flex;
+    justify-content: space-between;
+    .testimonial {
+      width: 100%;
+      margin: 0 10px;
+      height: 320px;
+      background-color: white;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .testimonial-text {
+      padding: 40px;
+      p {
+        font-size: 18px;
+        line-height: 26px;
+        color: #444;
+      }
+    }
+
+    .testimonial-person {
+      width: 100%;
+      height: 70px;
+      position: absolute;
+      bottom:0;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      p { font-weight: 600; }
+      img {
+        filter: grayscale(1);
+        margin-right: 10px;
+        height: auto;
+        width: 40px;
+      }
+    }
+  }
+}
+
 .section.pro {
+  padding: 120px 0;
   width: 100%;
   background-image: url(/images/sierra.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  .content-text {
-    color: white;
-    font-weight: normal;
+  .home-feature-block-heading {
+    h2 {
+      color: #333;
+      font-weight: bold;
+    }
   }
-
+  .home-feature-block-text {
+    p {
+      color: white;
+    }
+  }
   .pro-features {
     display: flex;
     justify-content: space-between;
@@ -425,7 +514,6 @@ p a {
       img {
         width: 350px;
         height: auto;
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
       }
     }
   }
@@ -520,7 +608,7 @@ footer {
   font-weight: bold;
   padding: 0 2px;
   border-radius: 4px;
-  font-size: 30px;
+  font-size: 18px;
   vertical-align: middle;
   bottom: 1px;
 }

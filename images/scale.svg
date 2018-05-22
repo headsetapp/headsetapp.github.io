@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="50" cy="50" r="11"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="22" height="22" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <circle id="path-3" cx="75" cy="27" r="6"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12" height="12" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <circle id="path-5" cx="25" cy="45" r="6"></circle>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12" height="12" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <circle id="path-7" cx="39" cy="75" r="6"></circle>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12" height="12" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <circle id="path-9" cx="64" cy="68" r="6"></circle>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12" height="12" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <circle id="path-11" cx="23" cy="7" r="3"></circle>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <circle id="path-13" cx="62" cy="22" r="3"></circle>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+        <circle id="path-15" cx="36" cy="56" r="3"></circle>
+        <mask id="mask-16" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-15"></use>
+        </mask>
+        <circle id="path-17" cx="3" cy="38" r="3"></circle>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-17"></use>
+        </mask>
+    </defs>
+    <g id="pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="homepage" transform="translate(-930.000000, -4446.000000)">
+            <g id="features" transform="translate(130.000000, 3656.000000)">
+                <g id="list" transform="translate(80.000000, 334.000000)">
+                    <g id="line" transform="translate(0.000000, 456.000000)">
+                        <g id="item" transform="translate(720.000000, 0.000000)">
+                            <g id="icon">
+                                <rect id="bg" fill="#F4FDFB" x="0" y="0" width="100" height="100" rx="25"></rect>
+                                <use id="bg" stroke="#2DDBAD" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                                <use id="bg" stroke="#2DDBAD" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+                                <use id="bg" stroke="#2DDBAD" mask="url(#mask-6)" stroke-width="4" xlink:href="#path-5"></use>
+                                <use id="bg" stroke="#2DDBAD" mask="url(#mask-8)" stroke-width="4" xlink:href="#path-7"></use>
+                                <use id="bg" stroke="#2DDBAD" mask="url(#mask-10)" stroke-width="4" xlink:href="#path-9"></use>
+                                <polygon id="arrow" fill="#2DDBAD" points="54 50 48 54 48 46"></polygon>
+                                <path d="M61,63.8583984 L56.1552734,57.9238281" id="line" stroke="#2DDBAD" stroke-width="2"></path>
+                                <path d="M71,31 L58,43" id="line" stroke="#2DDBAD" stroke-width="2"></path>
+                                <g id="bg" opacity="0.200000018" transform="translate(18.000000, 26.000000)" stroke="#2DDBAD">
+                                    <use mask="url(#mask-12)" stroke-width="4" xlink:href="#path-11"></use>
+                                    <use mask="url(#mask-14)" stroke-width="4" xlink:href="#path-13"></use>
+                                    <use mask="url(#mask-16)" stroke-width="4" xlink:href="#path-15"></use>
+                                    <use mask="url(#mask-18)" stroke-width="4" xlink:href="#path-17"></use>
+                                    <path d="M42.5,45.5 L37.5,54.5" id="line"></path>
+                                    <path d="M24.5,6.5 L52,1" id="line"></path>
+                                    <path d="M21.5,8.5 L11.5,15.5" id="line"></path>
+                                    <path d="M59.5,22.5 L42.5,23.5" id="line"></path>
+                                    <path d="M4.5,39.5 L15.5,46.5" id="line"></path>
+                                    <path d="M5.5,37.5 L22.5,29.5" id="line"></path>
+                                </g>
+                                <path d="M30,46 L40,49" id="line" stroke="#2DDBAD" stroke-width="2"></path>
+                                <path d="M41,71 L46,59" id="line" stroke="#2DDBAD" stroke-width="2"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

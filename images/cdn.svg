@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="23" cy="23" r="23"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="46" height="46" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M3.0433145,41.1862701 C7.98122776,46.6017807 15.0937656,50 23,50 L23,50 C37.9116882,50 50,37.9116882 50,23 C50,15.3706317 46.835616,8.48034487 41.7477219,3.57001355" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="46.9566855" height="46.4299865" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="homepage" transform="translate(-210.000000, -4446.000000)">
+            <g id="features" transform="translate(130.000000, 3656.000000)">
+                <g id="list" transform="translate(80.000000, 334.000000)">
+                    <g id="line" transform="translate(0.000000, 456.000000)">
+                        <g id="item">
+                            <g id="icon">
+                                <rect id="bg" fill="#F4FDFB" x="0" y="0" width="100" height="100" rx="25"></rect>
+                                <g id="globe" transform="translate(26.000000, 19.000000)">
+                                    <use id="bg" stroke="#2DDBAD" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                                    <use id="bg" stroke="#2DDBAD" mask="url(#mask-4)" stroke-width="4" stroke-linecap="round" xlink:href="#path-3"></use>
+                                    <rect id="bg" fill="#2DDBAD" x="11" y="58" width="26" height="2"></rect>
+                                    <rect id="bg" fill="#2DDBAD" x="23" y="48" width="2" height="12"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

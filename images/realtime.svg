@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="17" y="22" width="66" height="56" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="66" height="56" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="homepage" transform="translate(-210.000000, -3990.000000)">
+            <g id="features" transform="translate(130.000000, 3656.000000)">
+                <g id="list" transform="translate(80.000000, 334.000000)">
+                    <g id="line">
+                        <g id="item">
+                            <g id="icon">
+                                <rect id="bg" fill-opacity="0.0500000045" fill="#2DDBAD" x="0" y="0" width="100" height="100" rx="25"></rect>
+                                <use id="bg" stroke="#2DDBAD" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                                <rect id="bg" fill="#2DDBAD" x="19" y="28" width="63" height="2"></rect>
+                                <rect id="bg" fill="#2DDBAD" x="25" y="36" width="10" height="2"></rect>
+                                <rect id="bg" fill="#2DDBAD" x="25" y="42" width="2" height="7" rx="1"></rect>
+                                <rect id="bg" fill="#2DDBAD" x="33" y="42" width="2" height="7" rx="1"></rect>
+                                <rect id="bg" fill="#2DDBAD" x="37" y="39" width="2" height="10" rx="1"></rect>
+                                <rect id="bg" fill="#2DDBAD" x="29" y="45" width="2" height="4" rx="1"></rect>
+                                <path d="M18.1132812,60.9765625 C18.1132812,60.9765625 19.6114536,61.9567676 21.4683626,63.1716824 L22.1615202,63.6251926 C24.0144805,64.8375239 27.1410233,65.0484685 29.1281941,64.1042643 L29.3913371,63.9792318 C31.3859646,63.0314846 34.7431271,62.6559891 36.9058438,63.1441677 L40.0824375,63.8612034 C42.2379574,64.3477575 45.2797007,63.5086483 46.8794251,61.9840808 L51.7338562,57.3577161 C53.3322088,55.8344558 56.0918868,55.6349742 57.8908708,56.9072825 L62.3894027,60.0888113 C64.1914753,61.3633039 67.0470396,61.2585623 68.7488929,59.8700328 L70.7774743,58.2149282 C72.4876512,56.8196075 75.3572344,54.691052 77.1994633,53.4521965 L81.6621094,50.4511719" id="bg" stroke="#2DDBAD" stroke-width="2"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
