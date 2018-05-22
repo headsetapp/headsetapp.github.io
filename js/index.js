@@ -61,13 +61,6 @@ const handleDownloadLinks = (version) => {
     animation: 'shift-toward',
     trigger: 'click'
   })
-
-  // $('.download-buttons').html(links).find('a').click((c) => {
-  //   ga('send', 'event', 'Download', version);
-  // })
-
-  // e.g https://github.com/headsetapp/headset-electron/releases/tag/v1.2.3
-  $('#release-link').attr('href', releaseUrl)
 }
 
 const getLatestTag = () => {

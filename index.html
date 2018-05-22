@@ -17,7 +17,6 @@
   <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="images/favicon-48x48.png" sizes="48x48">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
 <body>
@@ -28,7 +27,7 @@
         <div class="header-content">
           <div class="logo">
             <a href="/">
-              <img src="images/Logo.png" alt="">
+              <img src="images/Logo.png" alt="" class="text-logo">
             </a>
           </div>
           <div class="main-menu">
@@ -37,6 +36,9 @@
             </a>
             <a href="/docs/faq">
               FAQ
+            </a>
+            <a href="#pro">
+              Pro
             </a>
             <a href="#pricing">
               Pricing
@@ -172,7 +174,7 @@
   <section class="section testimonials">
     <div class="wrapper">
       <div class="testimonial-header">
-        <h2>Liked By The Pros</h2>
+        <h2>That's what people say, mmm hmm...</h2>
       </div>
       <div class="testimonial-grid">
         <div class="testimonial">
@@ -224,6 +226,7 @@
     </div>
     </div>
   </section>
+  <a name="pro"></a>
   <section class="section pro">
     <div class="wrapper">
       <div class="home-feature-block-text-wrapper">
@@ -379,35 +382,44 @@
       </div>
     </div>
   </section>
+  <a name="contact"></a>
   <footer>
-    <a name="contact"></a>
-    <h4>Questions? Feedback?</h4>
-    <div class="social">
-      <a href="https://www.facebook.com/headsethq/" target="_blank" class="fb">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-      </a>
-      <a href="https://github.com/headsetapp/headset-electron" target="_blank" class="gh">
-        <i class="fa fa-github-alt" aria-hidden="true"></i>
-      </a>
-      <a href="https://twitter.com/headsetapp" target="_blank" class="tw">
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-      </a>
-      <a href="https://join.slack.com/t/headsetapp/shared_invite/enQtMjI2MDc1NjUwODA0LWVkZGMwZDE5Mzg1NWU3YmUzNWNkODk1MjY5NjZjMjQ5YmEwMjA0ZjM4MGMzMmNkOGY2NGM2M2Y5NDZlNDFkMTc"
-        target="_blank" class="sl">
-        <i class="fa fa-slack" aria-hidden="true"></i>
-      </a>
-      <a href="mailto:hello@headsetapp.co" target="_blank" class="em">
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-      </a>
-    </div>
-    <div class="policy">
-      <p class="copyright">
-        Created by
-        <a target="_blank" href="https://twitter.com/danielravina">@danielravina</a>
-        @
-        <span id="copy-year"></span> |
-        <a href="legal">Legal</a>
-      </p>
+    <div class="wrapper">
+      <div class="footer-grid">
+        <div class="col-0">
+          <img class="round-logo" src="images/Headset-64px.png" alt=""> <img src="images/Logo.png" class="text-logo" alt="">
+          <p>Headset is simple music player for busy people everywhere.</p>
+        </div>
+        <div class="col-1">
+          <p>Product</p>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pro">Headset <span class="pro-badge">Pro</span></a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a target="_blank" href="/docs/faq">FAQ</a></li>
+            <li><a target="_blank" href="https://github.com/headsetapp/headset-electron/issues">Submit an Issue</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-2">
+          <p>Contact Us</p>
+          <ul>
+            <li><a target="_blank" href="mailto:hello@headsetapp.co">Email</a></li>
+            <li><a target="_blank" href="https://www.facebook.com/headsethq/">Facebook</a></li>
+            <li><a target="_blank" href="https://twitter.com/headsetapp">Twitter</a></li>
+            <li><a target="_blank" href="https://join.slack.com/t/headsetapp/shared_invite/enQtMjI2MDc1NjUwODA0LWVkZGMwZDE5Mzg1NWU3YmUzNWNkODk1MjY5NjZjMjQ5YmEwMjA0ZjM4MGMzMmNkOGY2NGM2M2Y5NDZlNDFkMTc">Slack</a></li>
+            <li><a target="_blank" href="https://www.instagram.com/headsethq/">Instagram</a></li>
+            <li><a target="_blank" href="https://github.com/headsetapp/headset-electron">Github</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy-section">
+        <p>
+          Built and designed by Alignment Digital <br>
+          Copyright <span id="copy-year"></span> All rights reserved.
+        </p>
+      </div>
     </div>
   </footer>
   </div>
