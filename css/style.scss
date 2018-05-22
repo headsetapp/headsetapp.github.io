@@ -832,7 +832,17 @@ footer {
     flex-direction: column;
     .center-image {
       margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 80%;
+      }
     }
+  }
+  .section .left-content {
+    width: 95%;
+    // text-align: center
   }
   .section.sub .sub-feature-grid {
     align-items: center;
