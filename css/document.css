@@ -6,6 +6,10 @@
   line-height: 1.3;
 }
 
+.document .logo {
+  display: none;
+}
+
 .document p,
 .document li,
 .document h1,
