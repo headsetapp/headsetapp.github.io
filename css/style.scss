@@ -349,8 +349,11 @@ p a {
 }
 
 .round-logo {
-  width: 32px;
+  width: 28px;
   height: auto;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
 }
 
 
@@ -717,13 +720,6 @@ footer {
   background: #011f29;
   padding: 60px 0 20px;
   color: white;
-
-  .round-logo {
-    margin-right: 5px;
-    position: relative;
-    top: 3px;
-  }
-
   .footer-grid {
     display: flex;
     .col-0 {
