@@ -11,7 +11,6 @@ function handleDownloadLinks(version) {
   const os = window.navigator.userAgent
   const baseUrl = "https://github.com/headsetapp/headset-electron/releases/download"
   const releaseUrl = `https://github.com/headsetapp/headset-electron/releases/tag/v${version}`
-  const downloadsWrapper = $('.download')
   let download;
   let links = '';
 
@@ -62,7 +61,6 @@ function handleDownloadLinks(version) {
     onShown(instance) {
       $('.download-link').on('click', () => {
         ga('send', 'event', 'Download', version);
-        return false
       })
     },
     onHide(instance) {
