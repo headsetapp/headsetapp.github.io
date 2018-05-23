@@ -10,6 +10,10 @@
   display: none;
 }
 
+.document .main-menu a {
+  color: #444 !important;
+}
+
 .document p,
 .document li,
 .document h1,
