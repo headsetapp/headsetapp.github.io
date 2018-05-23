@@ -41,7 +41,7 @@ function handleDownloadLinks(version) {
   }
 
   download.links.forEach((link) => {
-    links += `<a class="" href="${baseUrl}/v${link.version}/${link.filename}">${link.label}</a>`
+    links += `<a class="download-link" href="${baseUrl}/v${link.version}/${link.filename}">${link.label}</a>`
   })
 
   links += `<a class="" href="${releaseUrl}">Other Environments</a>`
@@ -58,7 +58,16 @@ function handleDownloadLinks(version) {
     arrow: true,
     theme: 'honeybee',
     animation: 'shift-toward',
-    trigger: 'click'
+    trigger: 'click',
+    onShown(instance) {
+      $('.download-link').on('click', () => {
+        ga('send', 'event', 'Download', version);
+        return false
+      })
+    },
+    onHide(instance) {
+      $('.download-link').off('click')
+    },
   })
 }
 
