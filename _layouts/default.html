@@ -12,14 +12,14 @@
   <meta property="og:image" content="https://headsetapp.co/images/og5.png" />
   <meta property="og:image:type" content="image/png" />
 
-  <title>Headset - Desktop music player built on YouTube and Reddit</title>
+  <title>Headset - Desktop Music Player Built on YouTube and Reddit</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="images/favicon-48x48.png" sizes="48x48">
 </head>
 
-<body>
+<body class="document">
   <a name="top"></a>
   <div class="container">
     <header class="main-header">
@@ -50,10 +50,10 @@
         </div>
       </div>
     </header>
-
-
     <section class="section">
-      {{content}}
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </section>
     <footer>
       <div class="wrapper">
@@ -125,14 +125,11 @@
       </div>
     </footer>
   </div>
-  <script src="https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js"></script>
   <script src="js/ga.js"></script>
-  <script src="js/bundle.js"></script>
   <script>
     var d = new Date().getFullYear()
     document.querySelector('#copy-year').innerText = d
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
-
 </html>
