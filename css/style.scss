@@ -109,7 +109,7 @@ h2 {
     .roller {
       img {
         width: 910px;
-        animation: roller 100s linear;
+        animation: roller 90s linear infinite;
       }
       left: -436px;
       top: -422px;
@@ -790,7 +790,7 @@ footer {
 
 @keyframes roller {
   0% {
-    transform: translateY(30%);
+    transform: translateY(35%);
   }
   100% {
     transform: translateY(-100%);
