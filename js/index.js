@@ -85,6 +85,7 @@ function makeProSliders(id) {
     theme: 'honeybee',
     delay: 200,
     distance: 30,
+    flip: false,
   })
 }
 
