@@ -605,14 +605,15 @@ p a {
     display: flex;
     justify-content: space-between;
     .pro-feature {
-      // transform: translateY(25%);
-      transition: all .3s ease;
       img {
+        transition: all .3s ease;
         width: 320px;
         height: auto;
       }
       &:hover {
-        transform: translateY(40%);
+        img {
+          transform: translateY(40%);
+        }
       }
     }
   }
