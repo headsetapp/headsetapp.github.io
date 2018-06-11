@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="12" viewBox="0 0 44 12">
+	<defs>
+		<style>
+.dot { transform-origin: 50% 50%; -webkit-transform-origin: 50% 50%;
+	-webkit-animation: bouncedelay 1s infinite ease-in-out both;
+	animation: bouncedelay 1s infinite ease-in-out both; }
+.dot-1 { -webkit-animation-delay: -.54s; animation-delay: -.54s}
+.dot-2 { -webkit-animation-delay: -.48s; animation-delay: -.48s}
+.dot-3 { -webkit-animation-delay: -.32s; animation-delay: -.32s}
+@-webkit-keyframes bouncedelay {
+	0%,80%,100%{ -webkit-transform: scale(0.8); }	40%{ -webkit-transform: scale(1); } }
+@keyframes bouncedelay {
+	0%,80%,100%{ transform: scale(0.8); }	40%{ transform: scale(1); } }
+		</style>
+	</defs>
+	<circle class="dot dot-1" cx="6"  cy="6" r="6"/>
+	<circle class="dot dot-2" cx="22" cy="6" r="6"/>
+	<circle class="dot dot-3" cx="38" cy="6" r="6"/>
+</svg>

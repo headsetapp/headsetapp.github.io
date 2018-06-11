@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Headset</title>
+</head>
+
+<body>
+  <div id="app" class="layout"></div>
+  <div id="ytplayer"></div>
+  <script src="https://js.stripe.com/v3/" async></script>
+  <script>
+    try {
+      const { ipcRenderer } = require('electron');
+      window.ipcRenderer = ipcRenderer
+    } catch(err) {}
+    var bundle = document.createElement('script');
+    bundle.setAttribute('src', 'bundle.js');
+    document.body.appendChild(bundle);
+  </script>
+</body>
+</html>
