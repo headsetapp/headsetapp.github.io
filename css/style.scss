@@ -507,6 +507,12 @@ p a {
     display: block;
     text-align: center;
   }
+  .plan-switcher {
+    a {
+      color: #BEC8CE;
+      font-weight: bold !important;
+    }
+  }
 }
 
 .section.collect {

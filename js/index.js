@@ -97,4 +97,16 @@ $(document).ready(() => {
   makeProSliders('album-mode')
   makeProSliders('party-shuffle')
   makeProSliders('radio-insights')
+
+  $('#year-plan').click((e) => {
+    e.preventDefault()
+    $('#amount').text('$2')
+    $("#pro-description").text("Billed $24 annually")
+  })
+
+  $('#month-plan').click((e) => {
+    e.preventDefault()
+    $('#amount').text('$3')
+    $("#pro-description").text("billed month-to-month")
+  })
 });
