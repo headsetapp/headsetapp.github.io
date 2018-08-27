@@ -107,6 +107,6 @@ $(document).ready(() => {
   $('#month-plan').click((e) => {
     e.preventDefault()
     $('#amount').text('$3')
-    $("#pro-description").text("billed month-to-month")
+    $("#pro-description").text("Billed month-to-month")
   })
 });
