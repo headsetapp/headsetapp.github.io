@@ -10,7 +10,7 @@ title: "The Player Window"
 
 The player window is where the music comes from. The window loads an embedded youtube player that is fully controlled by the main window and users usually do not need to perform any actions on it.
 
-Fun fact: By default, the video loads in the _lowest possible quality_ to save you the bandwidh. This, however, doesn't affect the quality of the audio! 😌
+Fun fact: By default, the video loads in the _lowest possible quality_ to save you the bandwidth. This, however, doesn't affect the quality of the audio! 😌
 
 ### But Why? I don't want to watch any video! I'm here to listen to music.
 
