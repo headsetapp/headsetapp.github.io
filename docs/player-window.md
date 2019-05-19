@@ -2,11 +2,9 @@
 title: "The Player Window"
 ---
 
-# The Player Window
-
 ![screenshot](https://headsetapp.co/docs/img/player.png)
 
-### What is That?
+### What is that window?
 
 The player window is where the music comes from. The window loads an embedded youtube player that is fully controlled by the main window and users usually do not need to perform any actions on it.
 
