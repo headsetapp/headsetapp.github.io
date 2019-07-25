@@ -34,7 +34,7 @@ function handleDownloadLinks(version) {
       name: 'Linux',
       links: [
         { filename: `headset_${version}_amd64.deb`, label: 'Download for Linux (.deb)', version },
-        { filename: `headset-${version}.x86_64.rpm`, label: 'Download for Linux (.rpm)', version }
+        { filename: `headset-${version}-1.x86_64.rpm`, label: 'Download for Linux (.rpm)', version }
       ]
     }
   }
