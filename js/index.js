@@ -10,7 +10,7 @@ const LATEST_RELEASE = 'https://api.github.com/repos/headsetapp/headset-electron
 function handleDownloadLinks(version) {
   const os = window.navigator.userAgent
   const baseUrl = "https://github.com/headsetapp/headset-electron/releases/download"
-  const releaseUrl = `https://github.com/headsetapp/headset-electron/releases/tag/v${version}`
+  const releaseUrl = `https://github.com/headsetapp/headset-electron#installation`
   let download;
   let links = '';
 
@@ -43,7 +43,7 @@ function handleDownloadLinks(version) {
     links += `<a class="download-link" href="${baseUrl}/v${link.version}/${link.filename}">${link.label}</a>`
   })
 
-  links += `<a class="" href="${releaseUrl}">Other Environments</a>`
+  links += `<a class="" href="${releaseUrl}">Other ways to install</a>`
 
   const downloadSelector = document.createElement('div')
   downloadSelector.innerHTML = links
